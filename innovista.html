@@ -1,53 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Innovista Advisory - AKS Group</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Innovista Advisory - AKS Group</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+/* HERO CONSULTING STYLE */
+.hero-consult {
+    height: 60vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background: linear-gradient(to right, #000, #2c3e50);
+}
+
+.hero-consult h1 {
+    font-size:50px;
+}
+
+/* SERVICE BOX */
+.consult-box {
+    background:#111;
+    margin:20px;
+    padding:25px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.consult-box:hover {
+    transform:translateY(-10px);
+    background:#1c1c1c;
+}
+</style>
+
 </head>
+
 <body>
 
-<header class="header">
-  <div class="wrap inner">
-    <div class="brand"><span class="dot"></span>AKS Group</div>
-    <nav class="nav"><a href="index.html" class="">Home</a><a href="biopulse.html" class="">Bio Pulse</a><a href="strategix.html" class="">Strategix</a><a href="innovista.html" class="active">Innovista</a><a href="quantum.html" class="">Quantum Edge</a><a href="fortuna.html" class="">Fortuna</a></nav>
-  </div>
-</header>
+<!-- NAVBAR -->
+<nav>
+    <h2>AKS</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
-
-<section class="hero">
-  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Innovista Advisory hero image">
-  <div class="overlay"></div>
-  <div class="wrap">
-    <h1>Innovista Advisory</h1>
-    <p>Advising Innovation, Pioneering Vision</p>
-  </div>
+<!-- HERO -->
+<section class="hero-consult">
+    <div>
+        <h1>Innovista Advisory</h1>
+        <p>Strategic Consulting for Business Growth & Success</p>
+    </div>
 </section>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="card">
-        <h2 style="margin:0 0 6px 0;">Get a Callback</h2>
-        <p class="inline-links">Prefer WhatsApp? Message us at <strong>+91 76998 54611</strong></p>
-        <form class="form" action="mailto:aksgroup.abakash@gmail.com" method="POST" enctype="text/plain">
-          <input class="input" type="text" name="name" placeholder="Your name" required>
-          <input class="input" type="tel" name="phone" placeholder="Phone / WhatsApp" required>
-          <textarea class="input" name="message" placeholder="Your requirement" rows="4" required></textarea>
-          <button class="button" type="submit">Send Email Request</button>
-        </form>
-        <p class="inline-links">Or email us directly: <a href="mailto:aksgroup.abakash@gmail.com">aksgroup.abakash@gmail.com</a></p>
-      </div>
-    </div>
-  </section>
+<!-- ABOUT -->
+<section>
+    <h2>About Us</h2>
+    <p>
+        Innovista Advisory is the consulting division of AKS Group, providing expert guidance 
+        in business strategy, startup setup, and scalable growth solutions for modern enterprises.
+    </p>
+</section>
 
-<footer class="footer">
-  <div class="wrap">
-    <div>© AKS Group — Innovation · Growth · Trust</div>
-    <div>📞 +91 76998 54611 &nbsp;|&nbsp; 📧 aksgroup.abakash@gmail.com &nbsp;|&nbsp; 📸 @akscompanies</div>
-    <div>📍 Durgapur, India</div>
-  </div>
+<!-- SERVICES -->
+<section id="services">
+    <h2>Our Services</h2>
+
+    <div class="grid">
+
+        <div class="consult-box">
+            <h3>Business Setup</h3>
+            <p>Complete assistance in starting and structuring your business.</p>
+        </div>
+
+        <div class="consult-box">
+            <h3>Growth Strategy</h3>
+            <p>Data-driven strategies to scale your business efficiently.</p>
+        </div>
+
+        <div class="consult-box">
+            <h3>Market Expansion</h3>
+            <p>Expand into new markets with expert planning.</p>
+        </div>
+
+        <div class="consult-box">
+            <h3>Startup Consulting</h3>
+            <p>Guidance for launching and managing startups successfully.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- WHY -->
+<section>
+    <h2>Why Choose Innovista</h2>
+    <p>✔ Expert Advisors | ✔ Strategic Planning | ✔ Scalable Growth | ✔ Result-Oriented Approach</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Start Your Business Journey</h2>
+    <p>Connect with our advisors today</p>
+
+    <a href="https://wa.me/917699854611?text=Hello%20Innovista%20Advisory">
+        <button class="btn">Get Consultation</button>
+    </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Innovista Advisory | AKS Group</p>
 </footer>
+
+</body>
+</html>
 
 </body>
 </html>
