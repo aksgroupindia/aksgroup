@@ -1,52 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bio Pulse Healthcare - AKS Group</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bio Pulse Healthcare - AKS Group</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+/* HERO HEALTH STYLE */
+.hero-health {
+    height: 60vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background: linear-gradient(to right, #000, #064e3b);
+}
+
+.hero-health h1 {
+    font-size:50px;
+}
+
+/* SERVICE BOX */
+.health-box {
+    background:#0f172a;
+    margin:20px;
+    padding:25px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.health-box:hover {
+    transform:translateY(-10px);
+    background:#134e4a;
+}
+</style>
+
 </head>
+
 <body>
 
-<header class="header">
-  <div class="wrap inner">
-    <div class="brand"><span class="dot"></span>AKS Group</div>
-    <nav class="nav"><a href="index.html" class="">Home</a><a href="biopulse.html" class="active">Bio Pulse</a><a href="strategix.html" class="">Strategix</a><a href="innovista.html" class="">Innovista</a><a href="quantum.html" class="">Quantum Edge</a><a href="fortuna.html" class="">Fortuna</a></nav>
-  </div>
-</header>
+<!-- NAVBAR -->
+<nav>
+    <h2>AKS</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
-
-<section class="hero">
-  <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528" alt="Bio Pulse Healthcare hero image">
-  <div class="overlay"></div>
-  <div class="wrap">
-    <h1>Bio Pulse Healthcare</h1>
-    <p>Pulse of Natural Wellness</p>
-  </div>
+<!-- HERO -->
+<section class="hero-health">
+    <div>
+        <h1>Bio Pulse Healthcare</h1>
+        <p>Transform Your Health with Smart Nutrition & Lifestyle</p>
+    </div>
 </section>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="card">
-        <h2 style="margin:0 0 6px 0;">Get a Callback</h2>
-        <p class="inline-links">Prefer WhatsApp? Message us at <strong>+91 76998 54611</strong></p>
-        <form class="form" action="mailto:aksgroup.abakash@gmail.com" method="POST" enctype="text/plain">
-          <input class="input" type="text" name="name" placeholder="Your name" required>
-          <input class="input" type="tel" name="phone" placeholder="Phone / WhatsApp" required>
-          <textarea class="input" name="message" placeholder="Your requirement" rows="4" required></textarea>
-          <button class="button" type="submit">Send Email Request</button>
-        </form>
-        <p class="inline-links">Or email us directly: <a href="mailto:aksgroup.abakash@gmail.com">aksgroup.abakash@gmail.com</a></p>
-      </div>
-    </div>
-  </section>
+<!-- ABOUT -->
+<section>
+    <h2>About Us</h2>
+    <p>
+        Bio Pulse Healthcare is the health division of AKS Group, dedicated to helping 
+        individuals achieve their fitness and wellness goals through personalized diet 
+        plans, lifestyle coaching, and sustainable health solutions.
+    </p>
+</section>
 
-<footer class="footer">
-  <div class="wrap">
-    <div>© AKS Group — Innovation · Growth · Trust</div>
-    <div>📞 +91 76998 54611 &nbsp;|&nbsp; 📧 aksgroup.abakash@gmail.com &nbsp;|&nbsp; 📸 @akscompanies</div>
-    <div>📍 Durgapur, India</div>
-  </div>
+<!-- SERVICES -->
+<section id="services">
+    <h2>Our Services</h2>
+
+    <div class="grid">
+
+        <div class="health-box">
+            <h3>Weight Loss Programs</h3>
+            <p>Personalized plans to achieve healthy and sustainable weight loss.</p>
+        </div>
+
+        <div class="health-box">
+            <h3>Diet Consultation</h3>
+            <p>Expert guidance on nutrition based on your lifestyle.</p>
+        </div>
+
+        <div class="health-box">
+            <h3>Lifestyle Coaching</h3>
+            <p>Improve your daily habits for long-term health benefits.</p>
+        </div>
+
+        <div class="health-box">
+            <h3>Health Transformation</h3>
+            <p>Complete programs for fitness, wellness, and energy.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- WHY -->
+<section>
+    <h2>Why Choose Bio Pulse</h2>
+    <p>✔ Personalized Plans | ✔ Expert Guidance | ✔ Natural Approach | ✔ Long-Term Results</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Start Your Health Journey</h2>
+    <p>Connect with our experts today</p>
+
+    <a href="https://wa.me/917699854611?text=Hello%20Bio%20Pulse%20Healthcare">
+        <button class="btn">Get Started</button>
+    </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Bio Pulse Healthcare | AKS Group</p>
 </footer>
 
 </body>
