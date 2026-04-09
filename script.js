@@ -1,45 +1,20 @@
-// Initialize Animations
-document.addEventListener('DOMContentLoaded', () => {
-    AOS.init({
-        duration: 1000,
-        once: true,
-        easing: 'ease-in-out'
-    });
+// Smooth Page Entry
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("AKS Group Systems Online...");
+    document.body.style.opacity = "0";
+    setTimeout(() => {
+        document.body.style.transition = "opacity 1.5s";
+        document.body.style.opacity = "1";
+    }, 100);
 });
 
-// Navbar Scroll Effect
-window.addEventListener('scroll', () => {
-    const nav = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
-    }
-});
-
-// Funnel Automation Tracking
-// This logs which service the user clicked before going to the form
-function leadCapture(serviceName) {
-    console.log(`Lead initiated for: ${serviceName}`);
-    // Future integration: Add Facebook Pixel or Google Analytics events here
-}
-
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+// Dynamic Company Hover Effects
+const cards = document.querySelectorAll('.card');
+cards.forEach(card => {
+    card.addEventListener('mouseover', () => {
+        card.style.borderColor = "#C5B358";
     });
-});
-
-// Button Ripple Effect
-document.querySelectorAll('.btn-primary, .v-card').forEach(button => {
-    button.addEventListener('mousedown', function() {
-        this.style.transform = "scale(0.95)";
-    });
-    button.addEventListener('mouseup', function() {
-        this.style.transform = "scale(1)";
+    card.addEventListener('mouseout', () => {
+        card.style.borderColor = "rgba(255,255,255,0.1)";
     });
 });
