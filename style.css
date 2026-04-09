@@ -1,142 +1,49 @@
+/* Universal Reset & Variables */
 :root {
-    --bg-dark: #0a0a0a;
-    --accent-gold: #c5a059;
-    --text-light: #f4f4f4;
-    --glass: rgba(255, 255, 255, 0.05);
-    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', -apple-system, sans-serif;
+  --aks-gold: #C5B358;
+  --aks-dark: #050505;
+  --aks-glass: rgba(255, 255, 255, 0.03);
+  --quantum-blue: #00F5FF;
+  --biopulse-teal: #008080;
 }
 
 body {
-    background-color: var(--bg-dark);
-    color: var(--text-light);
-    overflow-x: hidden;
-    line-height: 1.6;
+  background-color: var(--aks-dark);
+  color: white;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  margin: 0;
+  line-height: 1.6;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-/* Navbar */
+/* Glassmorphism Navigation */
 nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 1.5rem 0;
-    transition: var(--transition);
+  position: fixed;
+  top: 0; width: 100%;
+  padding: 20px;
+  background: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(15px);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-nav.scrolled {
-    background: rgba(10, 10, 10, 0.8);
-    backdrop-filter: blur(15px);
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+nav a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
+nav a:hover { color: var(--aks-gold); }
+
+/* Unified Button Style */
+.cta-button {
+  padding: 12px 30px;
+  border: 1px solid var(--aks-gold);
+  background: transparent;
+  color: var(--aks-gold);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
 }
 
-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-decoration: none;
-    color: #fff;
-}
-
-.logo span { color: var(--accent-gold); }
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    gap: 2.5rem;
-}
-
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.nav-links a:hover { color: var(--accent-gold); }
-
-/* Hero */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
-}
-
-.hero h1 {
-    font-size: clamp(3rem, 8vw, 5rem);
-    margin-bottom: 1.5rem;
-}
-
-.text-gold { color: var(--accent-gold); }
-
-.btn-primary, .btn-gold {
-    background: var(--accent-gold);
-    color: #000;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: var(--transition);
-    display: inline-block;
-}
-
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3); }
-
-/* Ventures Cards */
-.ventures-grid { padding: 100px 0; text-align: center; }
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.v-card {
-    background: var(--glass);
-    padding: 3rem 2rem;
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 15px;
-    text-decoration: none;
-    color: #fff;
-    transition: var(--transition);
-}
-
-.v-card:hover {
-    border-color: var(--accent-gold);
-    transform: translateY(-10px);
-}
-
-.v-card i {
-    font-size: 3rem;
-    color: var(--accent-gold);
-    margin-bottom: 1.5rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .nav-links { display: none; }
+.cta-button:hover {
+  background: var(--aks-gold);
+  color: black;
+  box-shadow: 0 0 20px rgba(197, 179, 88, 0.4);
 }
