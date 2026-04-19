@@ -3,152 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innovista Advisory | AKS Group</title>
+    <title>Innovista Advisory | Abakash Kumar Sah</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #05070a; scroll-behavior: smooth; }
-        .gold-accent { color: #C5A059; }
-        .gold-bg { background-color: #C5A059; }
-        input, select, textarea { 
-            background: rgba(255, 255, 255, 0.03) !important; 
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
-            color: white !important;
-        }
-        input:focus, select:focus, textarea:focus { border-color: #C5A059 !important; outline: none; }
-        .stat-card { border-left: 1px solid rgba(197, 160, 89, 0.3); }
+        :root { --gold: #C5A059; --black: #05070a; }
+        body { background-color: var(--black); font-family: 'Inter', sans-serif; color: white; overflow-x: hidden; }
+        .font-heading { font-family: 'Montserrat', sans-serif; }
+        .gold-gradient { background: linear-gradient(90deg, #C5A059 0%, #F5E0B8 50%, #C5A059 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .compass-glow { filter: drop-shadow(0 0 20px rgba(197, 160, 89, 0.4)); }
+        .grid-bg { background-image: radial-gradient(rgba(197, 160, 89, 0.05) 1px, transparent 1px); background-size: 40px 40px; }
     </style>
 </head>
-<body class="text-white">
+<body class="antialiased grid-bg">
 
-    <nav class="p-6 border-b border-white/5 flex justify-between items-center bg-black/50 backdrop-blur-md sticky top-0 z-50">
-        <a href="index.html" class="text-xs tracking-widest text-gray-500 hover:text-white transition uppercase">← BACK TO AKS GROUP</a>
-        <div class="flex items-center gap-3">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="1.5">
-                <path d="M9 18h6m-3-15v3m-7.5 2.5l2.1 2.1m10.8 0l2.1-2.1M4 12h3m10 0h3"/>
-                <path d="M12 6c-3.3 0-6 2.7-6 6 0 2.2 1.2 4.1 3 5.2V19h6v-1.8c1.8-1.1 3-3 3-5.2 0-3.3-2.7-6-6-6z"/>
-            </svg>
-            <div class="font-bold tracking-widest font-heading uppercase">INNOVISTA <span class="gold-accent">ADVISORY</span></div>
+    <nav class="flex justify-between items-center px-8 py-8 md:px-20 fixed w-full top-0 z-[100] backdrop-blur-xl border-b border-white/5">
+        <div class="flex items-center gap-4">
+            <a href="index.html" class="flex items-center gap-4">
+                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" class="compass-glow">
+                    <path d="M50 10L55 45L90 50L55 55L50 90L45 55L10 50L45 45L50 10Z" fill="#C5A059"/>
+                    <circle cx="50" cy="50" r="8" fill="#05070a"/>
+                </svg>
+                <span class="text-xl font-heading tracking-[0.3em] uppercase">INNOVISTA <span class="text-[#C5A059]">ADVISORY</span></span>
+            </a>
         </div>
-        <div class="hidden md:block text-[10px] text-gray-600 tracking-widest uppercase">Management & Strategy Division</div>
+        <a href="index.html" class="text-[10px] tracking-[0.4em] font-bold text-gray-500 hover:text-[#C5A059] transition uppercase">Main Terminal</a>
     </nav>
 
-    <div class="max-w-7xl mx-auto px-6 py-12 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-16">
-        
-        <div class="flex flex-col justify-center">
-            <h1 class="text-5xl lg:text-7xl font-bold font-heading mb-8 leading-tight uppercase">
-                Scale Your <br> <span class="gold-accent italic">Enterprise.</span>
+    <header class="min-h-screen flex flex-col justify-center items-center px-6 pt-20 text-center">
+        <div class="max-w-4xl mx-auto space-y-10">
+            <p class="text-[#C5A059] text-[10px] tracking-[0.8em] uppercase font-bold">Strategic Intelligence Division</p>
+            <h1 class="text-6xl md:text-8xl font-heading font-bold leading-tight uppercase tracking-tighter">
+                Scale Your <br> <span class="gold-gradient">Vision.</span>
             </h1>
-            <p class="text-gray-400 text-lg leading-relaxed mb-10 max-w-md">
-                We transform high-potential startups into market leaders through rigorous operational audits and data-driven scaling roadmaps.
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed font-light">
+                Innovista Advisory provides the structural blueprints and executive strategies required for national dominance and operational excellence.
             </p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-12 pt-10">
+                <div class="text-left space-y-4 max-w-xs">
+                    <h3 class="text-xs gold-gradient font-bold tracking-[0.3em] uppercase">Consultation Node</h3>
+                    <div class="p-4 bg-white/5 border border-white/10 rounded-xl">
+                        <img src="qr-code.jpeg" alt="AKS Advisory QR" class="w-48 h-48 rounded-lg grayscale hover:grayscale-0 transition duration-700">
+                    </div>
+                </div>
+                
+                <div class="text-left space-y-6 border-l border-white/10 pl-12">
+                    <div class="space-y-1">
+                        <p class="text-[9px] text-gray-600 uppercase tracking-widest">Director of Strategy</p>
+                        <p class="text-sm font-bold uppercase text-white">Abakash Kumar Sah</p>
+                    </div>
+                    <a href="https://wa.me/7699854611" class="inline-block bg-[#C5A059] text-black px-12 py-4 font-bold text-xs tracking-[0.3em] uppercase hover:brightness-110 transition">Request Briefing</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <section class="py-32 px-8 md:px-20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
             <div class="space-y-6">
-                <div class="stat-card pl-6">
-                    <h4 class="text-sm font-bold uppercase gold-accent tracking-widest">Market Analysis</h4>
-                    <p class="text-gray-500 text-sm">In-depth competitive benchmarking and gap identification.</p>
-                </div>
-                <div class="stat-card pl-6">
-                    <h4 class="text-sm font-bold uppercase gold-accent tracking-widest">Revenue Ops</h4>
-                    <p class="text-gray-500 text-sm">Optimization of sales funnels and automated growth engines.</p>
-                </div>
-                <div class="stat-card pl-6">
-                    <h4 class="text-sm font-bold uppercase gold-accent tracking-widest">Instant Roadmap</h4>
-                    <p class="text-gray-500 text-sm">Receive a 12-month strategic plan based on your current metrics.</p>
-                </div>
+                <h4 class="text-xl font-bold uppercase tracking-widest gold-gradient">Market Dominance</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Aggressive positioning strategies designed to secure the top-tier market share in your specific industry.</p>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-xl font-bold uppercase tracking-widest gold-gradient">Operational Flow</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Redesigning internal systems for maximum efficiency, reducing friction, and increasing net revenue.</p>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-xl font-bold uppercase tracking-widest gold-gradient">Exit Engineering</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Building businesses with the end in mind. We prepare your assets for high-value acquisition or public listing.</p>
             </div>
         </div>
+    </section>
 
-        <div class="bg-gradient-to-br from-white/[0.03] to-transparent p-10 rounded-sm border border-white/5 shadow-2xl">
-            <h3 class="text-xl font-bold mb-8 uppercase tracking-widest font-heading border-b border-white/10 pb-4">Business Audit Intake</h3>
-            
-            <form id="innovistaForm" class="space-y-6">
-                <div>
-                    <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Company Name</label>
-                    <input type="text" name="company_name" class="w-full p-4 rounded-none" placeholder="Enter Legal Entity Name" required>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Annual Revenue</label>
-                        <select name="revenue" class="w-full p-4 rounded-none appearance-none">
-                            <option value="Early Stage">Early Stage (< 10L)</option>
-                            <option value="Growth">Growth (10L - 50L)</option>
-                            <option value="Scaling">Scaling (50L - 1Cr)</option>
-                            <option value="Enterprise">Enterprise (1Cr+)</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Team Size</label>
-                        <input type="number" name="team_size" class="w-full p-4 rounded-none" placeholder="No. of Employees">
-                    </div>
-                </div>
-
-                <div class="p-6 bg-white/[0.02] border border-white/5 rounded-none text-center">
-                    <p class="text-[9px] uppercase tracking-widest text-gray-500 mb-4">Corporate UPI Transfer</p>
-                    <div class="flex justify-center mb-3">
-                        <img src="qr-code.jpeg" alt="AKS UPI QR" class="w-28 h-28 opacity-80 hover:opacity-100 transition grayscale hover:grayscale-0">
-                    </div>
-                    <p class="text-[9px] text-gray-600 font-mono">7699854611-1@okbizaxis</p>
-                </div>
-
-                <div class="pt-10">
-                    <div class="flex justify-between items-baseline mb-6">
-                        <span class="text-[10px] text-gray-500 uppercase tracking-widest">Standard Audit Fee</span>
-                        <span class="text-4xl font-bold font-heading">₹15,000</span>
-                    </div>
-
-                    <button type="button" id="payButton" class="w-full gold-bg text-black font-bold py-5 rounded-none uppercase tracking-[0.3em] text-xs hover:bg-[#d4b06a] transition-colors">
-                        Generate Strategy Roadmap
-                    </button>
-                    
-                    <div class="mt-6 flex items-center justify-center gap-2 opacity-30">
-                        <div class="h-[1px] w-full bg-white"></div>
-                        <span class="text-[8px] whitespace-nowrap uppercase tracking-widest italic">Secure Corporate Transaction</span>
-                        <div class="h-[1px] w-full bg-white"></div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <footer class="py-20 px-10 border-t border-white/5 bg-black">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div class="space-y-4">
-                <div class="text-xl font-bold font-heading tracking-widest text-white uppercase">
-                    AKS <span class="gold-accent">GROUP</span>
-                </div>
-                <p class="text-gray-500 text-xs leading-relaxed max-w-xs">
-                    Transforming high-potential startups into global market leaders. Headquartered in Durgapur.
+    <footer class="py-20 px-8 md:px-20 border-t border-white/5 bg-black">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div class="space-y-6">
+                <span class="text-xl font-heading tracking-[0.3em] uppercase">AKS <span class="text-[#C5A059]">GROUP</span></span>
+                <p class="text-[9px] text-gray-600 tracking-[0.4em] uppercase leading-relaxed">
+                    Division: Innovista Advisory<br>
+                    Founder: Abakash Kumar Sah
                 </p>
             </div>
-            
             <div class="space-y-4">
-                <h4 class="text-[10px] uppercase tracking-[0.4em] text-gray-400 font-bold">Contact Hub</h4>
-                <div class="space-y-2">
-                    <p class="text-sm text-gray-300">Phone: <span class="text-white">+91 7699854611</span></p>
-                    <p class="text-sm text-gray-300">Email: <span class="text-white">aksgroup.abakash@gmail.com</span></p>
+                <h4 class="text-[10px] tracking-[0.4em] text-gray-500 font-bold uppercase">National Command</h4>
+                <p class="text-sm text-gray-300 font-medium">Durgapur, West Bengal, India.</p>
+                <div class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                    <span class="text-[9px] text-gray-500 tracking-widest uppercase">Pan-India Consulting Active</span>
                 </div>
             </div>
-
-            <div class="space-y-4">
-                <h4 class="text-[10px] uppercase tracking-[0.4em] text-gray-400 font-bold">Location</h4>
-                <p class="text-sm text-gray-300">
-                    Anuj Electricals Building,<br>
-                    Durgapur, WB, India.
-                </p>
-            </div>
-        </div>
-        
-        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 flex justify-between items-center">
-            <p class="text-[9px] text-gray-600 uppercase tracking-widest">© 2026 AKS Group. All Rights Reserved.</p>
-            <div class="flex gap-4 opacity-20 transition hover:opacity-50">
-                <img src="https://cdn.razorpay.com/static/assets/badge/badge-dark.png" alt="Razorpay Secure" class="h-6">
+            <div class="space-y-4 text-left md:text-right">
+                <h4 class="text-[10px] tracking-[0.4em] text-gray-500 font-bold uppercase">Executive Desk</h4>
+                <p class="text-2xl font-heading text-[#C5A059] tracking-tighter">+91 7699854611</p>
+                <p class="text-[8px] text-gray-800 uppercase tracking-widest mt-8">© 2026 Abakash Kumar Sah. No. 1 Strategic Advisory.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
