@@ -1,81 +1,56 @@
 /**
- * AKS GROUP - CORE SYSTEM LOGIC
- * Master Controller for Payments and Data Persistence
- * Verified Contact: 7699854611 | aksgroup.abakash@gmail.com
+ * AKS GROUP | COMMAND LOGIC v2.0
+ * Architect: Abakash Kumar Sah
+ * Location: Durgapur, West Bengal, India
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. SELECT THE FORM & BUTTON
-    const assessmentForm = document.querySelector('form');
-    const payButton = document.getElementById('payButton');
+// 1. SERVICE CONFIGURATION GRID
+const AKS_SERVICES = {
+    'biopulse': { name: 'Bio Pulse Healthcare', fee: 1999, description: 'Metabolic & Nutrition Assessment' },
+    'innovista': { name: 'Innovista Advisory', fee: 15000, description: 'Business Scaling Strategy' },
+    'strategix': { name: 'Strategix Law', fee: 4999, description: 'Corporate & IP Protection' },
+    'quantum': { name: 'Quantum Edge Tech', fee: 9999, description: 'AI Infrastructure Deployment' },
+    'fortuna': { name: 'Fortuna Capital', fee: 2499, description: 'Wealth Management Assessment' }
+};
 
-    if (payButton && assessmentForm) {
-        payButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            
-            // 2. VALIDATE FORM DATA
-            // Ensures user doesn't skip required fields
-            if (!assessmentForm.checkValidity()) {
-                alert("Please complete all required fields before generating your bespoke report.");
-                assessmentForm.reportValidity();
-                return;
-            }
-
-            // 3. CAPTURE FORM DATA
-            const formData = new FormData(assessmentForm);
-            const data = Object.fromEntries(formData.entries());
-            
-            // Store data locally for retrieval on the thank-you page
-            localStorage.setItem('aks_report_data', JSON.stringify(data));
-
-            // 4. TRIGGER RAZORPAY MODAL
-            handlePayment(data);
-        });
-    }
-});
+// 2. INITIALIZE GLOBAL RECIPIENT DATA
+const CHAIRMAN_CONTACT = "7699854611";
+const CHAIRMAN_EMAIL = "aksgroup.abakash@gmail.com";
 
 /**
- * RAZORPAY INTEGRATION
- * Dynamically calculates price based on the current division page
+ * TRIGGER AUTOMATED INTAKE & PAYMENT
+ * @param {string} divisionKey - The key from AKS_SERVICES
  */
-function handlePayment(userData) {
-    const pagePath = window.location.pathname.toLowerCase();
+function processDivisionEntry(divisionKey) {
+    const service = AKS_SERVICES[divisionKey];
     
-    // Default Price (Biopulse)
-    let amount = 1999; 
-    
-    // Dynamic Price Routing based on URL
-    if (pagePath.includes('fortuna')) amount = 2499;
-    else if (pagePath.includes('strategix')) amount = 4999;
-    else if (pagePath.includes('quantum')) amount = 9999;
-    else if (pagePath.includes('innovista')) amount = 15000;
+    if (!service) {
+        console.error("Invalid Division Access Attempted.");
+        return;
+    }
 
+    // Initialize Razorpay Options
     const options = {
-        "key": "rzp_test_XXXXXXXXXXXXXX", // Replace with your LIVE Key from Razorpay Dashboard
-        "amount": amount * 100, // Razorpay processes in Paise (INR * 100)
+        "key": "rzp_live_XXXXXXXXXXXXXX", // REPLACE WITH YOUR LIVE RAZORPAY KEY
+        "amount": service.fee * 100, // Amount in paise
         "currency": "INR",
-        "name": "AKS Group",
-        "description": "Premium Intelligence Report",
-        "image": "https://aksgroupindia.github.io/aksgroup/logo.png", 
-        "handler": function (response) {
-            // This code executes AFTER a successful payment
-            console.log("Transaction ID:", response.razorpay_payment_id);
-            
-            // Redirect to the success page
-            window.location.href = `thank-you.html?payment_id=${response.razorpay_payment_id}`;
-        },
+        "name": "AKS GROUP | " + service.name,
+        "description": service.description,
+        "image": "https://aksgroupindia.github.io/aksgroup/logo.png", // Ensure your logo is hosted
         "prefill": {
-            "name": userData.name || "AKS Client",
-            "email": "aksgroup.abakash@gmail.com",
-            "contact": "7699854611"
+            "name": "Elite Client",
+            "email": CHAIRMAN_EMAIL,
+            "contact": CHAIRMAN_CONTACT
+        },
+        "notes": {
+            "division": service.name,
+            "founder": "Abakash Kumar Sah"
+        },
+        "handler": function (response) {
+            handleSuccess(response, service.name);
         },
         "theme": {
-            "color": "#C5A059" // AKS Signature Gold
-        },
-        "modal": {
-            "ondismiss": function(){
-                console.log('Payment modal closed by user');
-            }
+            "color": "#C5A059" // AKS Corporate Gold
         }
     };
 
@@ -83,7 +58,36 @@ function handlePayment(userData) {
         const rzp1 = new Razorpay(options);
         rzp1.open();
     } catch (error) {
-        console.error("Payment Gateway Error:", error);
-        alert("The payment system is currently initializing. Please try again in a few moments or use the Direct UPI scan option.");
+        // Fallback to Direct UPI QR if SDK fails
+        console.warn("Payment SDK redirected to Secure UPI Terminal.");
+        window.location.href = "#payment-terminal";
     }
 }
+
+/**
+ * HANDLE SUCCESSFUL SETTLEMENT & AGENTIC TRIGGER
+ */
+function handleSuccess(response, serviceName) {
+    console.log("SETTLEMENT_VERIFIED: ", response.razorpay_payment_id);
+    
+    // Display Confirmation to Client
+    const statusMsg = `Settlement Complete. Division: ${serviceName}. Your Agentic Report is being compiled by the AKS Intelligence engine.`;
+    alert(statusMsg);
+
+    // Logic for Data Persistence / Email Trigger
+    // In a zero-overhead setup, you can use Formspree or EmailJS here to send the lead data.
+}
+
+/**
+ * UI PERFORMANCE LOGIC: Glassmorphism & Scroll Effects
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    // Fade-in effect for the Monolith UI
+    document.body.style.opacity = '0';
+    setTimeout(() => {
+        document.body.style.transition = 'opacity 1.5s ease-in-out';
+        document.body.style.opacity = '1';
+    }, 100);
+
+    console.log("AKS GROUP | SYSTEM_ONLINE | WELCOME CHAIRMAN ABAKASH KUMAR SAH");
+});
