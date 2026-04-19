@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strategix Law | AKS Group</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Montserrat', sans-serif; background-color: #05070a; }
@@ -66,35 +67,41 @@
             <form id="strategixForm" class="space-y-6">
                 <div>
                     <label class="block text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-2">Legal Entity Type</label>
-                    <select class="w-full p-4 rounded-none appearance-none">
-                        <option>Private Limited Company</option>
-                        <option>LLP / Partnership</option>
-                        <option>Individual / Proprietorship</option>
-                        <option>Startup (Pre-revenue)</option>
+                    <select name="entity_type" class="w-full p-4 rounded-none appearance-none">
+                        <option value="Private Limited">Private Limited Company</option>
+                        <option value="LLP">LLP / Partnership</option>
+                        <option value="Individual">Individual / Proprietorship</option>
+                        <option value="Startup">Startup (Pre-revenue)</option>
                     </select>
                 </div>
 
                 <div>
                     <label class="block text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-2">Area of Practice</label>
-                    <select class="w-full p-4 rounded-none appearance-none">
-                        <option>Contract Review & Drafting</option>
-                        <option>Intellectual Property (IP) & Trademark</option>
-                        <option>Employment & Labor Compliance</option>
-                        <option>Corporate Litigation Support</option>
+                    <select name="practice_area" class="w-full p-4 rounded-none appearance-none">
+                        <option value="Contracts">Contract Review & Drafting</option>
+                        <option value="IP">Intellectual Property (IP) & Trademark</option>
+                        <option value="Compliance">Employment & Labor Compliance</option>
+                        <option value="Litigation">Corporate Litigation Support</option>
                     </select>
                 </div>
 
                 <div>
                     <label class="block text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-2">Detailed Inquiry</label>
-                    <textarea class="w-full p-4 rounded-none h-32" placeholder="Briefly describe the legal matter or document requiring audit..."></textarea>
+                    <textarea name="inquiry" class="w-full p-4 rounded-none h-32" placeholder="Briefly describe the legal matter..."></textarea>
                 </div>
 
                 <div>
                     <label class="block text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-2">Matter Urgency</label>
                     <div class="flex gap-4">
-                        <label class="flex-1 text-center py-3 border border-white/10 text-[10px] uppercase tracking-widest cursor-pointer hover:border-[#C5A059] transition"><input type="radio" name="urgency" class="hidden" checked> Routine</label>
-                        <label class="flex-1 text-center py-3 border border-white/10 text-[10px] uppercase tracking-widest cursor-pointer hover:border-[#C5A059] transition"><input type="radio" name="urgency" class="hidden"> Priority</label>
-                        <label class="flex-1 text-center py-3 border border-white/10 text-[10px] uppercase tracking-widest cursor-pointer hover:border-[#C5A059] transition"><input type="radio" name="urgency" class="hidden text-red-500"> Urgent</label>
+                        <label class="flex-1 text-center py-3 border border-white/10 text-[10px] uppercase tracking-widest cursor-pointer hover:border-[#C5A059] transition">
+                            <input type="radio" name="urgency" value="Routine" class="hidden" checked> Routine
+                        </label>
+                        <label class="flex-1 text-center py-3 border border-white/10 text-[10px] uppercase tracking-widest cursor-pointer hover:border-[#C5A059] transition">
+                            <input type="radio" name="urgency" value="Priority" class="hidden"> Priority
+                        </label>
+                        <label class="flex-1 text-center py-3 border border-white/10 text-[10px] uppercase tracking-widest cursor-pointer hover:border-[#C5A059] transition">
+                            <input type="radio" name="urgency" value="Urgent" class="hidden"> Urgent
+                        </label>
                     </div>
                 </div>
 
@@ -110,7 +117,7 @@
                         </div>
                     </div>
 
-                    <button type="button" class="w-full gold-bg text-black font-bold py-5 uppercase tracking-[0.3em] text-[10px] hover:bg-[#d4b06a] transition-all duration-500">
+                    <button type="button" id="payButton" class="w-full gold-bg text-black font-bold py-5 uppercase tracking-[0.3em] text-[10px] hover:bg-[#d4b06a] transition-all duration-500">
                         Initiate Legal Assessment
                     </button>
                 </div>
@@ -125,5 +132,6 @@
         </p>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
