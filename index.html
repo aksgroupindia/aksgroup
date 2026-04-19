@@ -3,83 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AKS Group | Abakash Kumar Sah</title>
+    <title>AKS GROUP | GLOBAL CONGLOMERATE</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #C5A059; --black: #05070a; }
-        body { background-color: var(--black); font-family: 'Inter', sans-serif; color: white; scroll-behavior: smooth; }
-        .font-heading { font-family: 'Montserrat', sans-serif; }
-        .gold-gradient { background: linear-gradient(90deg, #C5A059 0%, #F5E0B8 50%, #C5A059 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(197,160,89,0.08) 0%, transparent 70%); z-index: -1; }
-        .division-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(255,255,255,0.03); }
-        .division-card:hover { border-color: var(--gold); background: rgba(197,160,89,0.02); transform: translateY(-10px); }
+        .division-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(197, 160, 89, 0.1);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .division-card:hover {
+            border-color: #C5A059;
+            background: rgba(197, 160, 89, 0.05);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+        .gold-gradient {
+            background: linear-gradient(to right, #C5A059, #F5E0A3, #C5A059);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
-<body class="antialiased">
+<body class="bg-[#05070a] text-white font-sans selection:bg-[#C5A059] selection:text-black">
 
-    <div class="hero-glow"></div>
-
-    <nav class="flex justify-between items-center px-8 py-8 md:px-20 fixed w-full top-0 z-[100] backdrop-blur-xl border-b border-white/5">
-        <div class="flex items-center gap-4">
-            <svg width="45" height="45" viewBox="0 0 100 100" fill="none">
-                <path d="M50 5L95 90H75L50 50L30 90H5L50 5Z" fill="#C5A059"/>
-                <path d="M42 65H58V70H42V65Z" fill="#05070a"/>
-            </svg>
-            <span class="text-2xl font-heading tracking-[0.3em] uppercase">AKS <span class="text-[#C5A059]">GROUP</span></span>
-        </div>
-        <a href="https://wa.me/7699854611" class="hidden md:block text-[10px] tracking-[0.4em] font-bold border border-[#C5A059]/30 px-8 py-3 rounded-sm hover:bg-[#C5A059] hover:text-black transition duration-500">EXECUTIVE LIAISON</a>
-    </nav>
-
-    <section class="h-screen flex flex-col justify-center items-center text-center px-6 relative">
-        <p class="text-[#C5A059] text-[10px] md:text-xs tracking-[0.8em] uppercase mb-8 opacity-80">The Standard of Integrated Excellence</p>
-        <h1 class="text-6xl md:text-9xl font-heading font-bold mb-8 leading-tight tracking-tighter uppercase">
-            ABAKASH <br> <span class="gold-gradient">KUMAR SAH</span>
-        </h1>
-        <div class="w-24 h-[1px] bg-[#C5A059]/50 mb-12"></div>
-        <p class="max-w-2xl text-gray-500 text-sm md:text-base leading-relaxed tracking-wide font-light">
-            Chairman & Founder of AKS Group. Architecting the future of healthcare, technology, and finance across the Indian subcontinent.
+    <header class="min-h-screen flex flex-col justify-center items-center px-6 text-center border-b border-white/5">
+        <p class="text-[#C5A059] text-[10px] tracking-[1em] font-bold mb-8 uppercase animate-pulse">Institutional Monolith</p>
+        <h1 class="text-6xl md:text-9xl font-heading font-bold tracking-tighter mb-8 gold-gradient">AKS GROUP</h1>
+        <p class="max-w-2xl text-gray-500 text-xs md:text-sm tracking-[0.3em] leading-loose uppercase">
+            Healthcare • Technology • Finance • Law • Advisory
         </p>
+        <div class="mt-16 animate-bounce">
+            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </header>
+
+    <section class="py-32 px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <a href="biopulse.html" class="division-card p-12 rounded-3xl group">
+            <p class="text-[10px] text-[#C5A059] tracking-[0.4em] mb-6 font-bold uppercase">Division: Healthcare</p>
+            <h2 class="text-3xl font-heading font-bold mb-4 group-hover:gold-gradient transition">BIO PULSE</h2>
+            <p class="text-gray-500 text-[10px] tracking-widest uppercase mb-8">Metabolic Engineering</p>
+            <span class="text-[9px] text-white border-b border-[#C5A059] pb-1 uppercase tracking-widest">Enter Terminal</span>
+        </a>
+
+        <a href="quantum.html" class="division-card p-12 rounded-3xl group">
+            <p class="text-[10px] text-[#C5A059] tracking-[0.4em] mb-6 font-bold uppercase">Division: Technology</p>
+            <h2 class="text-3xl font-heading font-bold mb-4 group-hover:gold-gradient transition">QUANTUM EDGE</h2>
+            <p class="text-gray-500 text-[10px] tracking-widest uppercase mb-8">AI Infrastructure</p>
+            <span class="text-[9px] text-white border-b border-[#C5A059] pb-1 uppercase tracking-widest">Enter Terminal</span>
+        </a>
+
+        <a href="fortuna.html" class="division-card p-12 rounded-3xl group">
+            <p class="text-[10px] text-[#C5A059] tracking-[0.4em] mb-6 font-bold uppercase">Division: Finance</p>
+            <h2 class="text-3xl font-heading font-bold mb-4 group-hover:gold-gradient transition">FORTUNA</h2>
+            <p class="text-gray-500 text-[10px] tracking-widest uppercase mb-8">Capital Growth</p>
+            <span class="text-[9px] text-white border-b border-[#C5A059] pb-1 uppercase tracking-widest">Enter Terminal</span>
+        </a>
+
+        <a href="strategix.html" class="division-card p-12 rounded-3xl group">
+            <p class="text-[10px] text-[#C5A059] tracking-[0.4em] mb-6 font-bold uppercase">Division: Law</p>
+            <h2 class="text-3xl font-heading font-bold mb-4 group-hover:gold-gradient transition">STRATEGIX</h2>
+            <p class="text-gray-500 text-[10px] tracking-widest uppercase mb-8">Corporate Defense</p>
+            <span class="text-[9px] text-white border-b border-[#C5A059] pb-1 uppercase tracking-widest">Enter Terminal</span>
+        </a>
+
+        <a href="innovista.html" class="division-card p-12 rounded-3xl group lg:col-span-2">
+            <p class="text-[10px] text-[#C5A059] tracking-[0.4em] mb-6 font-bold uppercase">Division: Advisory</p>
+            <h2 class="text-3xl font-heading font-bold mb-4 group-hover:gold-gradient transition">INNOVISTA</h2>
+            <p class="text-gray-500 text-[10px] tracking-widest uppercase mb-8">Global Scaling & Agentic Autonomy</p>
+            <span class="text-[9px] text-white border-b border-[#C5A059] pb-1 uppercase tracking-widest">Enter Terminal</span>
+        </a>
+
     </section>
 
-    <section id="divisions" class="py-32 px-8 md:px-20">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="biopulse.html" class="division-card p-12 rounded-3xl">
-                <p class="text-[10px] text-[#C5A059] tracking-[0.4em] mb-6 font-bold">HEALTHCARE</p>
-                <h2 class="text-3xl font-heading font-bold mb-4">BIO PULSE</h2>
-                <p class="text-gray-500 text-sm leading-relaxed">Precision biology and metabolic optimization systems for the elite.</p>
-            </a>
-            <a href="quantum.html" class="division-card p-12 rounded-3xl">
-                <p class="text-[10px] text-[#C5A059] tracking-[0.4em] mb-6 font-bold">TECHNOLOGY</p>
-                <h2 class="text-3xl font-heading font-bold mb-4">QUANTUM EDGE</h2>
-                <p class="text-gray-500 text-sm leading-relaxed">AI-driven digital infrastructure and automated industrial solutions.</p>
-            </a>
-            <a href="fortuna.html" class="division-card p-12 rounded-3xl">
-                <p class="text-[10px] text-[#C5A059] tracking-[0.4em] mb-6 font-bold">FINANCE</p>
-                <h2 class="text-3xl font-heading font-bold mb-4">FORTUNA</h2>
-                <p class="text-gray-500 text-sm leading-relaxed">Bespoke wealth management and generational asset scaling.</p>
-            </a>
+    <footer class="py-20 border-t border-white/5 text-center">
+        <div class="flex justify-center gap-10 mb-10 text-[10px] tracking-[0.3em] uppercase text-gray-500 font-bold">
+            <a href="https://wa.me/7699854611" class="hover:text-white transition">WhatsApp</a>
+            <a href="mailto:aksgroup.abakash@gmail.com" class="hover:text-white transition">Institutional Email</a>
         </div>
-    </section>
-
-    <footer class="py-24 px-8 md:px-20 border-t border-white/5">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
-            <div>
-                <h4 class="text-[10px] tracking-[0.5em] text-gray-600 font-bold uppercase mb-8">Corporate Command</h4>
-                <p class="text-3xl font-heading mb-4 text-white">AKS GROUP <span class="text-[#C5A059]">HQ</span></p>
-                <p class="text-gray-500 tracking-widest text-sm uppercase">Durgapur, West Bengal, India</p>
-                <div class="mt-12 flex items-center gap-3">
-                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                    <span class="text-[10px] tracking-[0.3em] text-gray-400">PAN-INDIA OPERATIONS ACTIVE</span>
-                </div>
-            </div>
-            <div class="text-right flex flex-col justify-end">
-                <p class="text-[10px] tracking-[0.5em] text-gray-600 uppercase mb-4">Direct Contact</p>
-                <p class="text-2xl text-[#C5A059] font-heading">+91 7699854611</p>
-                <p class="text-xs text-gray-500 mt-4 opacity-50">© 2026 Abakash Kumar Sah. No. 1 Global Presence.</p>
-            </div>
-        </div>
+        <p class="text-[9px] text-gray-700 tracking-[0.8em] uppercase">AKS GROUP MONOLITH | DURGAPUR HQ</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
