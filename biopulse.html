@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biopulse | AKS Group</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #05070a; }
@@ -56,40 +57,40 @@
                 <div class="grid grid-cols-2 gap-4">
                     <div>
                         <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Age</label>
-                        <input type="number" class="w-full p-3 rounded" placeholder="25">
+                        <input type="number" name="age" class="w-full p-3 rounded" placeholder="25" required>
                     </div>
                     <div>
                         <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Weight (kg)</label>
-                        <input type="number" class="w-full p-3 rounded" placeholder="70">
+                        <input type="number" name="weight" class="w-full p-3 rounded" placeholder="70" required>
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Primary Goal</label>
-                    <select class="w-full p-3 rounded appearance-none">
-                        <option>Weight Loss</option>
-                        <option>Muscle Gain</option>
-                        <option>Clean Bulking</option>
-                        <option>Energy Optimization</option>
+                    <select name="goal" class="w-full p-3 rounded appearance-none">
+                        <option value="Weight Loss">Weight Loss</option>
+                        <option value="Muscle Gain">Muscle Gain</option>
+                        <option value="Clean Bulking">Clean Bulking</option>
+                        <option value="Energy Optimization">Energy Optimization</option>
                     </select>
                 </div>
 
                 <div>
                     <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Activity Level</label>
-                    <select class="w-full p-3 rounded appearance-none">
-                        <option>Sedentary (Office job)</option>
-                        <option>Lightly Active (1-2 days/week)</option>
-                        <option>Moderately Active (3-5 days/week)</option>
-                        <option>Athlete (Daily/High Intensity)</option>
+                    <select name="activity" class="w-full p-3 rounded appearance-none">
+                        <option value="Sedentary">Sedentary (Office job)</option>
+                        <option value="Lightly Active">Lightly Active (1-2 days/week)</option>
+                        <option value="Moderately Active">Moderately Active (3-5 days/week)</option>
+                        <option value="Athlete">Athlete (Daily/High Intensity)</option>
                     </select>
                 </div>
 
                 <div>
                     <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Dietary Preference</label>
                     <div class="flex gap-4">
-                        <label class="text-sm"><input type="radio" name="diet" class="mr-2"> Veg</label>
-                        <label class="text-sm"><input type="radio" name="diet" class="mr-2"> Non-Veg</label>
-                        <label class="text-sm"><input type="radio" name="diet" class="mr-2"> Vegan</label>
+                        <label class="text-sm"><input type="radio" name="diet" value="Veg" class="mr-2" checked> Veg</label>
+                        <label class="text-sm"><input type="radio" name="diet" value="Non-Veg" class="mr-2"> Non-Veg</label>
+                        <label class="text-sm"><input type="radio" name="diet" value="Vegan" class="mr-2"> Vegan</label>
                     </div>
                 </div>
 
@@ -101,7 +102,7 @@
                         </div>
                         <span class="text-xs text-[#C5A059]">Secure 256-bit Encryption</span>
                     </div>
-                    <button type="button" class="w-full gold-bg text-black font-bold py-4 rounded hover:brightness-110 transition uppercase tracking-widest text-sm">
+                    <button type="button" id="payButton" class="w-full gold-bg text-black font-bold py-4 rounded hover:brightness-110 transition uppercase tracking-widest text-sm">
                         Generate My Report
                     </button>
                 </div>
@@ -109,5 +110,6 @@
         </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
