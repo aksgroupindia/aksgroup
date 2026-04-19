@@ -3,108 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AKS Group | Premium Global Solutions</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>AKS Group | Integrated Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #05070a; }
+        .font-heading { font-family: 'Montserrat', sans-serif; }
+        .gold-gradient {
+            background: linear-gradient(90deg, #C5A059 0%, #F1D299 50%, #C5A059 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: #C5A059;
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
-<body>
-    <nav id="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">AKS<span>GROUP</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">Ventures <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-content">
-                        <li><a href="biopulse.html">Bio Pulse</a></li>
-                        <li><a href="innovista.html">Innovista</a></li>
-                        <li><a href="quantum.html">Quantum Edge</a></li>
-                        <li><a href="strategix.html">Strategix Law</a></li>
-                        <li><a href="fortuna.html">Fortuna Capital</a></li>
-                    </ul>
-                </li>
-                <li><a href="#testimonials">Trust</a></li>
-                <li><a href="https://wa.me/YOUR_NUMBER?text=I'm%20interested%20in%20AKS%20Group%20services" class="btn-gold">Consult Now</a></li>
-            </ul>
+<body class="text-white">
+
+    <nav class="flex justify-between items-center px-10 py-6 border-b border-white/5">
+        <div class="text-2xl font-bold font-heading tracking-widest text-white">
+            AKS <span class="gold-gradient">GROUP</span>
         </div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-gray-400">
+            <a href="#" class="hover:text-white transition">Divisions</a>
+            <a href="#" class="hover:text-white transition">About</a>
+            <a href="#" class="hover:text-white transition">Contact</a>
+        </div>
+        <button class="px-6 py-2 border border-gold-500 text-sm font-bold rounded-full hover:bg-[#C5A059] hover:text-black transition duration-300">
+            CLIENT LOGIN
+        </button>
     </nav>
 
-    <header class="hero">
-        <div class="hero-content" data-aos="fade-up">
-            <h1>Elevating Global <span class="text-gold">Standards.</span></h1>
-            <p>A multi-disciplinary conglomerate driving innovation in Healthcare, Tech, Law, and Finance.</p>
-            <div class="hero-btns">
-                <a href="#ventures" class="btn-primary">Explore Ventures</a>
-                <a href="https://forms.gle/YOUR_FORM_ID" class="btn-outline">Join the Network</a>
-            </div>
-        </div>
-    </header>
-
-    <section class="metrics">
-        <div class="metric-card" data-aos="zoom-in">
-            <h3>100+</h3>
-            <p>Global Clients</p>
-        </div>
-        <div class="metric-card" data-aos="zoom-in" data-aos-delay="100">
-            <h3>5</h3>
-            <p>Specialized Sectors</p>
-        </div>
-        <div class="metric-card" data-aos="zoom-in" data-aos-delay="200">
-            <h3>24/7</h3>
-            <p>Expert Support</p>
-        </div>
-    </section>
-
-    <section id="ventures" class="ventures-grid">
-        <h2 class="section-title">Our Ecosystem</h2>
-        <div class="grid-container">
-            <a href="biopulse.html" class="v-card">
-                <i class="fas fa-heartbeat"></i>
-                <h3>Bio Pulse</h3>
-                <p>Premium Wellness & Nutrition</p>
-            </a>
-            <a href="innovista.html" class="v-card">
-                <i class="fas fa-lightbulb"></i>
-                <h3>Innovista</h3>
-                <p>Strategic Business Advisory</p>
-            </a>
-            <a href="quantum.html" class="v-card">
-                <i class="fas fa-microchip"></i>
-                <h3>Quantum Edge</h3>
-                <p>AI & Automation Labs</p>
-            </a>
-            <a href="fortuna.html" class="v-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Fortuna Capital</h3>
-                <p>Wealth Management</p>
-            </a>
-        </div>
-    </section>
-
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Client Perspectives</h2>
-            <div class="testimonial-slider">
-                <div class="t-card">
-                    <p>"The strategic depth of AKS Group transformed our operational efficiency."</p>
-                    <span>- CEO, FinTech Solutions</span>
-                </div>
+    <section class="relative h-[80vh] flex items-center justify-center text-center px-4 overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C5A059] opacity-10 blur-[120px] rounded-full"></div>
+        
+        <div class="relative z-10 max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-bold font-heading mb-6 tracking-tight">
+                Architecting <span class="gold-gradient">Excellence</span> <br> Across Every Dimension.
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                From your physical well-being to your digital infrastructure and financial legacy—AKS Group integrates the world’s most vital services into one premium ecosystem.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#divisions" class="px-10 py-4 bg-[#C5A059] text-black font-bold rounded-sm hover:brightness-110 transition">EXPLORE DIVISIONS</a>
+                <a href="#" class="px-10 py-4 border border-white/20 hover:bg-white/5 transition">VIEW CORPORATE PROFILE</a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 AKS Group. Designed for Excellence.</p>
-            <div class="socials">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
+    <section id="divisions" class="py-20 px-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <div class="glass-card p-8 rounded-lg">
+                <div class="text-[#C5A059] mb-4 text-3xl font-light">01</div>
+                <h3 class="font-heading font-bold mb-2">BIOPULSE</h3>
+                <p class="text-gray-500 text-sm">Precision nutrition and wellness optimized for high performance.</p>
+            </div>
+            <div class="glass-card p-8 rounded-lg">
+                <div class="text-[#C5A059] mb-4 text-3xl font-light">02</div>
+                <h3 class="font-heading font-bold mb-2">INNOVISTA</h3>
+                <p class="text-gray-500 text-sm">Data-driven business consulting for global scaling.</p>
+            </div>
+            <div class="glass-card p-8 rounded-lg">
+                <div class="text-[#C5A059] mb-4 text-3xl font-light">03</div>
+                <h3 class="font-heading font-bold mb-2">STRATEGIX</h3>
+                <p class="text-gray-500 text-sm">Elite legal advisory for corporate and personal protection.</p>
+            </div>
+            <div class="glass-card p-8 rounded-lg">
+                <div class="text-[#C5A059] mb-4 text-3xl font-light">04</div>
+                <h3 class="font-heading font-bold mb-2">QUANTUM EDGE</h3>
+                <p class="text-gray-500 text-sm">Advanced software and AI solutions for digital dominance.</p>
+            </div>
+            <div class="glass-card p-8 rounded-lg">
+                <div class="text-[#C5A059] mb-4 text-3xl font-light">05</div>
+                <h3 class="font-heading font-bold mb-2">FORTUNA</h3>
+                <p class="text-gray-500 text-sm">Sophisticated wealth management and investment planning.</p>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
