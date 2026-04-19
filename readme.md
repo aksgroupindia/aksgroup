@@ -1,57 +1,59 @@
-# AKS Group | Integrated Excellence Headquarters 🏛️
-
-![Status](https://img.shields.io/badge/Status-Production--Ready-gold?style=for-the-badge)
-![Tech](https://img.shields.io/badge/Built%20With-Tailwind%20CSS-blue?style=for-the-badge)
-![Hosting](https://img.shields.io/badge/Deployment-GitHub%20Pages-black?style=for-the-badge)
-
-**AKS Group** is a premium, multi-division conglomerate platform architected for high-revenue growth and automated digital service delivery. Based in Durgapur, India, this digital headquarters utilizes a luxury design aesthetic (inspired by Apple and Tesla) to provide services across Health, Law, Technology, Finance, and Business Advisory.
+# ABAKASH KUMAR SAH | THE AKS GROUP
+> **National Headquarters:** Durgapur, West Bengal, India.
+> **Operational Status:** Pan-India Grid Active [WB | JH | BR | National]
+> **Identity:** Ultra-Premium Multi-Industry Conglomerate
 
 ---
 
-## 🏗️ The Ecosystem (5 Specialized Divisions)
+## 🏛️ CORPORATE MANIFESTO
+The **AKS Group** is an elite, multi-industry conglomerate architected for the 21st-century digital economy. Led by Chairman **Abakash Kumar Sah**, we integrate high-performance healthcare, scalable technology, and generational wealth management into a single, seamless ecosystem of excellence.
 
-Each division is a standalone service engine with automated intake forms and payment integration.
+We do not just provide services; we build the infrastructure for the future of India.
 
-| Division | Industry focus | Assessment Fee |
+---
+
+## 🛰️ THE SERVICE GRID (AGENTIC READY)
+
+Each division operates as a standalone service engine with automated intake and high-fidelity reporting.
+
+| Division | Industry Focus | Assessment Fee |
 | :--- | :--- | :--- |
-| **Biopulse** | Precision Nutrition & Healthcare | ₹1,999 |
-| **Innovista** | Business Scaling & Management | ₹15,000 |
-| **Strategix** | Corporate Legal & IP Protection | ₹4,999 |
-| **Quantum Edge** | AI Infrastructure & Software | ₹9,999 |
-| **Fortuna** | Wealth Management & Finance | ₹2,499 |
+| **Biopulse** | Precision Nutrition & Healthcare | **₹1,999** |
+| **Innovista** | Business Scaling & Management | **₹15,000** |
+| **Strategix** | Corporate Legal & IP Protection | **₹4,999** |
+| **Quantum Edge** | AI Infrastructure & Software | **₹9,999** |
+| **Fortuna** | Wealth Management & Finance | **₹2,499** |
 
 ---
 
-## 🚀 Core Features
-
-- **Ultra-Premium UI/UX:** Dark-mode architecture with gold accents and high-performance glassmorphism.
-- **Automated Funnel:** Form Intake → Razorpay Gateway Integration → Direct UPI QR Support.
-- **Agentic Ready:** Structured to deliver instant digital reports (PDFs) upon payment verification.
-- **Fully Responsive:** Optimized for high-end desktop displays and mobile mobile devices.
-- **Zero Overhead:** Hosted entirely on GitHub Pages for maximum uptime with zero hosting costs.
-
----
-
-## 🛠️ Tech Stack
-
-- **Frontend:** HTML5, Tailwind CSS (Custom Config), Google Fonts (Montserrat & Inter).
-- **Logic:** Vanilla JavaScript (`script.js`) for payment triggers and local data persistence.
-- **Payments:** Razorpay Standard SDK + Integrated Google Pay UPI QR.
-- **Graphics:** Scalable Vector Graphics (SVG) for high-fidelity branding.
+## 🛠️ TECHNICAL ARCHITECTURE
+* **UI/UX:** Dark-mode architecture, gold accents, and high-performance glassmorphism.
+* **Automated Funnel:** Form Intake → Razorpay Gateway → Direct UPI QR Support.
+* **Agentic Ready:** Structured for instant digital report delivery (PDF) post-verification.
+* **Zero Overhead:** Hosted on GitHub Pages for 100% uptime with zero maintenance costs.
+* **Stack:** HTML5, Tailwind CSS, Vanilla JavaScript, Razorpay SDK, SVG Graphics.
 
 ---
 
-## 📂 Project Structure
+## 🏗️ INFRASTRUCTURE COMMAND
+This repository serves as the **Global Command Center** for the AKS Group digital presence.
+* **Typography:** Montserrat (Headings) & Inter (Prose) for a "Tesla-grade" aesthetic.
+* **Payment Logic:** Secure Settlement Nodes integrated with the Chairman's direct terminal.
 
-```text
-/
-├── index.html          # Main Corporate Hub
-├── biopulse.html       # Healthcare Division
-├── innovista.html      # Business Advisory Division
-├── strategix.html      # Legal Services Division
-├── quantum.html        # Tech & AI Division
-├── fortuna.html        # Finance & Investment Division
-├── thank-you.html      # Post-Payment Success Page
-├── qr-code.jpeg        # Direct Payment QR (GPay/UPI)
-├── style.css           # Global Luxury Branding Styles
-└── script.js           # Core Payment & Automation Logic
+---
+
+## 📞 EXECUTIVE CONTACT (SINGLE POINT OF COMMAND)
+For high-value partnerships, private consultations, or division briefings:
+
+* **Chairman & Founder:** Abakash Kumar Sah
+* **Global Executive Mobile:** +91 7699854611
+* **Email:** aksgroup.abakash@gmail.com
+* **Location:** Durgapur, West Bengal, India.
+
+---
+
+## 📜 LEGAL & COMPLIANCE
+© 2026 Abakash Kumar Sah. All Rights Reserved. 
+The "AKS" Monolith and Division Logos are proprietary assets of the AKS Group. 
+**Regional Operations:** West Bengal | Jharkhand | Bihar 
+**Expansion Phase:** Pan-India Q3 2026.
