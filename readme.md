@@ -1,59 +1,62 @@
-# ABAKASH KUMAR SAH | THE AKS GROUP
-> **National Headquarters:** Durgapur, West Bengal, India.
-> **Operational Status:** Pan-India Grid Active [WB | JH | BR | National]
-> **Identity:** Ultra-Premium Multi-Industry Conglomerate
+# AKS GROUP | GLOBAL DIGITAL MONOLITH
+**Autonomous Conglomerate Architecture v5.0**
+
+> "Transforming localized commerce into global agentic autonomy."
 
 ---
 
-## 🏛️ CORPORATE MANIFESTO
-The **AKS Group** is an elite, multi-industry conglomerate architected for the 21st-century digital economy. Led by Chairman **Abakash Kumar Sah**, we integrate high-performance healthcare, scalable technology, and generational wealth management into a single, seamless ecosystem of excellence.
+## 🏛 Institutional Overview
+AKS Group is an ultra-premium digital conglomerate headquartered in Durgapur, India. This repository contains the source code for the group’s central digital headquarters, featuring five specialized divisions engineered for high-velocity scaling and autonomous fulfillment.
 
-We do not just provide services; we build the infrastructure for the future of India.
-
----
-
-## 🛰️ THE SERVICE GRID (AGENTIC READY)
-
-Each division operates as a standalone service engine with automated intake and high-fidelity reporting.
-
-| Division | Industry Focus | Assessment Fee |
-| :--- | :--- | :--- |
-| **Biopulse** | Precision Nutrition & Healthcare | **₹1,999** |
-| **Innovista** | Business Scaling & Management | **₹15,000** |
-| **Strategix** | Corporate Legal & IP Protection | **₹4,999** |
-| **Quantum Edge** | AI Infrastructure & Software | **₹9,999** |
-| **Fortuna** | Wealth Management & Finance | **₹2,499** |
+### 🌐 Strategic Divisions
+| Division | Sector | Focus | Settlement Fee |
+| :--- | :--- | :--- | :--- |
+| **Bio Pulse** | Healthcare | Metabolic Engineering & Longevity | ₹1,999 |
+| **Innovista** | Advisory | Market Dominance & Agentic Scaling | ₹15,000 |
+| **Quantum Edge** | Technology | AI Infrastructure & Automation | ₹9,999 |
+| **Strategix** | Law | Corporate Defense & Asset Shielding | ₹4,999 |
+| **Fortuna** | Finance | Alpha Wealth & Generational Capital | ₹2,499 |
 
 ---
 
-## 🛠️ TECHNICAL ARCHITECTURE
-* **UI/UX:** Dark-mode architecture, gold accents, and high-performance glassmorphism.
-* **Automated Funnel:** Form Intake → Razorpay Gateway → Direct UPI QR Support.
-* **Agentic Ready:** Structured for instant digital report delivery (PDF) post-verification.
-* **Zero Overhead:** Hosted on GitHub Pages for 100% uptime with zero maintenance costs.
-* **Stack:** HTML5, Tailwind CSS, Vanilla JavaScript, Razorpay SDK, SVG Graphics.
+## ⚙️ Technical Architecture
+
+The system operates on a **Three-Layer Monolith** design to ensure 100% uptime and zero-overhead management.
+
+### 1. Frontend: High-Prestige Terminal
+- **Stack:** HTML5, Tailwind CSS, JavaScript.
+- **Aesthetic:** Dark-themed glassmorphism inspired by Apple and Tesla.
+- **UX:** Integrated intake forms with instant transaction verification.
+
+### 2. Backend: The Monolith Brain
+- **Engine:** Google Apps Script (Serverless).
+- **Logic:** Requirement-based template engine that generates real-time AI solutions.
+- **Fulfillment:** Automatic SMTP dispatch and instant online viewport reveal.
+
+### 3. Database: Master Ledger
+- **Storage:** Google Sheets (Encrypted).
+- **Tracking:** Automated logging of UTR, Client Goals, and Settlement Status.
 
 ---
 
-## 🏗️ INFRASTRUCTURE COMMAND
-This repository serves as the **Global Command Center** for the AKS Group digital presence.
-* **Typography:** Montserrat (Headings) & Inter (Prose) for a "Tesla-grade" aesthetic.
-* **Payment Logic:** Secure Settlement Nodes integrated with the Chairman's direct terminal.
+## 🛡 Security & Settlement
+- **Merchant Gateway:** Direct UPI Settlement via **7699854611-1@okbizaxis**.
+- **Privacy:** 256-bit data transmission from frontend to secure backend vault.
+- **Verification:** 12-digit UTR validation logic for institutional-grade fulfillment.
 
 ---
 
-## 📞 EXECUTIVE CONTACT (SINGLE POINT OF COMMAND)
-For high-value partnerships, private consultations, or division briefings:
-
-* **Chairman & Founder:** Abakash Kumar Sah
-* **Global Executive Mobile:** +91 7699854611
-* **Email:** aksgroup.abakash@gmail.com
-* **Location:** Durgapur, West Bengal, India.
+## 🚀 Deployment Instructions
+1. **Frontend:** Hosted on GitHub Pages via the `/docs` or root directory.
+2. **Brain:** `AKS_CORE` script deployed as a Web App to handle Webhooks.
+3. **Ledger:** Connected via the `SpreadsheetApp` API for real-time persistence.
 
 ---
 
-## 📜 LEGAL & COMPLIANCE
-© 2026 Abakash Kumar Sah. All Rights Reserved. 
-The "AKS" Monolith and Division Logos are proprietary assets of the AKS Group. 
-**Regional Operations:** West Bengal | Jharkhand | Bihar 
-**Expansion Phase:** Pan-India Q3 2026.
+## 📞 Executive Liaison
+For direct institutional inquiries or high-ticket consulting, contact the Chairman's office:
+- **WhatsApp:** +91 7699854611
+- **Email:** aksgroup.abakash@gmail.com
+
+---
+*© 2026 AKS GROUP. All Rights Reserved. Architected for World No. 1 Status.*
