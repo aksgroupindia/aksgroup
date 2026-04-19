@@ -3,148 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strategix Law | AKS Group</title>
+    <title>Strategix Law | Abakash Kumar Sah</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Montserrat', sans-serif; background-color: #05070a; scroll-behavior: smooth; }
-        .serif { font-family: 'Playfair Display', serif; }
-        .gold-accent { color: #C5A059; }
-        .gold-bg { background-color: #C5A059; }
-        input, select, textarea { 
-            background: rgba(255, 255, 255, 0.02) !important; 
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
-            color: #fff !important;
-            font-size: 0.875rem;
-        }
-        input:focus, select:focus, textarea:focus { border-color: #C5A059 !important; outline: none; background: rgba(255,255,255,0.05) !important; }
-        .legal-seal { border: 1px solid rgba(197, 160, 89, 0.2); background: linear-gradient(135deg, rgba(197, 160, 89, 0.05) 0%, transparent 100%); }
+        :root { --gold: #C5A059; --black: #05070a; }
+        body { background-color: var(--black); font-family: 'Inter', sans-serif; color: white; overflow-x: hidden; }
+        .font-heading { font-family: 'Montserrat', sans-serif; }
+        .gold-gradient { background: linear-gradient(90deg, #C5A059 0%, #F5E0B8 50%, #C5A059 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .legal-pillar { border-left: 2px solid var(--gold); padding-left: 30px; margin-bottom: 2rem; }
+        .glass-vault { background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(197, 160, 89, 0.1); backdrop-filter: blur(15px); }
     </style>
 </head>
-<body class="text-white">
+<body class="antialiased">
 
-    <nav class="p-8 border-b border-white/5 flex justify-between items-center bg-black/40 backdrop-blur-md sticky top-0 z-50">
-        <a href="index.html" class="text-[10px] tracking-[0.5em] text-gray-500 hover:text-white transition uppercase">← BACK TO AKS GROUP</a>
-        <div class="flex items-center gap-3">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="1.5">
-                <path d="M12 3v18M6 7l6-2 6 2M3 13c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6-6-2.7-6-6zm12 0c0-3.3 2.7-6 6-6s6 2.7 6 6-2.7 6-6 6-6-2.7-6-6z" stroke-linecap="round"/>
-            </svg>
-            <div class="font-bold tracking-widest uppercase text-sm">STRATEGIX <span class="gold-accent">LAW FIRM</span></div>
+    <nav class="flex justify-between items-center px-8 py-8 md:px-20 fixed w-full top-0 z-[100] backdrop-blur-xl border-b border-white/5">
+        <div class="flex items-center gap-4">
+            <a href="index.html" class="flex items-center gap-4">
+                <svg width="35" height="35" viewBox="0 0 100 100" fill="none">
+                    <rect x="35" y="20" width="8" height="60" fill="#C5A059"/>
+                    <rect x="57" y="20" width="8" height="60" fill="#C5A059"/>
+                    <rect x="25" y="45" width="50" height="4" fill="#C5A059"/>
+                </svg>
+                <span class="text-xl font-heading tracking-[0.3em] uppercase">STRATEGIX <span class="text-[#C5A059]">LAW</span></span>
+            </a>
         </div>
-        <div class="hidden md:block text-[10px] text-gray-600 italic tracking-widest">Justice. Strategy. Integrity.</div>
+        <a href="index.html" class="text-[10px] tracking-[0.4em] font-bold text-gray-600 hover:text-[#C5A059] transition uppercase">Corporate Hub</a>
     </nav>
 
-    <div class="max-w-6xl mx-auto px-6 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-20">
-        
-        <div class="flex flex-col justify-center space-y-8">
-            <div class="inline-block px-3 py-1 border border-[#C5A059]/30 text-[10px] tracking-[0.3em] gold-accent uppercase w-fit">
-                Corporate & Personal Counsel
-            </div>
-            <h1 class="serif text-5xl lg:text-6xl font-bold leading-tight uppercase">
-                Defending Your <br> <span class="gold-accent italic">Interests.</span>
-            </h1>
-            <p class="text-gray-400 text-lg font-light leading-relaxed">
-                Strategix provides elite legal advisory services, specializing in corporate compliance, intellectual property protection, and high-stakes contract negotiation.
-            </p>
-
-            <div class="space-y-4 pt-4">
-                <div class="flex items-start gap-4">
-                    <span class="gold-accent text-xl">§</span>
-                    <div>
-                        <h4 class="text-sm font-bold uppercase tracking-widest">Confidentiality Assured</h4>
-                        <p class="text-xs text-gray-500">Every digital audit is protected by end-to-end encryption protocols.</p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-4">
-                    <span class="gold-accent text-xl">§</span>
-                    <div>
-                        <h4 class="text-sm font-bold uppercase tracking-widest">Regulatory Compliance</h4>
-                        <p class="text-xs text-gray-500">Aligned with the latest amendments in corporate and IT law.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="legal-seal p-10 lg:p-14 relative">
-            <h3 class="serif text-2xl mb-8 border-b border-white/10 pb-6 uppercase">Case Assessment Intake</h3>
-            
-            <form id="strategixForm" class="space-y-6">
-                <div>
-                    <label class="block text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-2">Legal Entity Type</label>
-                    <select name="entity_type" class="w-full p-4 rounded-none appearance-none">
-                        <option value="Private Limited">Private Limited Company</option>
-                        <option value="LLP">LLP / Partnership</option>
-                        <option value="Individual">Individual / Proprietorship</option>
-                        <option value="Startup">Startup (Pre-revenue)</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-2">Detailed Inquiry</label>
-                    <textarea name="inquiry" class="w-full p-4 rounded-none h-32" placeholder="Briefly describe the legal matter..." required></textarea>
-                </div>
-
-                <div class="p-6 bg-white/[0.02] border border-white/10 rounded-none text-center">
-                    <p class="text-[9px] uppercase tracking-widest text-gray-500 mb-4">Direct Legal Consultation UPI</p>
-                    <div class="flex justify-center mb-3">
-                        <img src="qr-code.jpeg" alt="AKS UPI QR" class="w-24 h-24 opacity-80 hover:opacity-100 transition grayscale hover:grayscale-0">
-                    </div>
-                    <p class="text-[9px] text-gray-600 font-mono italic">ID: 7699854611-1@okbizaxis</p>
-                </div>
-
-                <div class="pt-10 border-t border-white/5">
-                    <div class="flex justify-between items-center mb-8">
-                        <div>
-                            <span class="text-[9px] text-gray-500 block tracking-widest uppercase">Initial Guidance Fee</span>
-                            <span class="serif text-3xl font-bold italic">₹4,999</span>
-                        </div>
-                        <div class="text-right">
-                            <span class="text-[9px] text-gray-600 block uppercase tracking-widest">Digital PDF Audit</span>
-                            <span class="text-[10px] text-[#C5A059] italic">Instantly Generated</span>
-                        </div>
-                    </div>
-
-                    <button type="button" id="payButton" class="w-full gold-bg text-black font-bold py-5 uppercase tracking-[0.3em] text-[10px] hover:bg-[#d4b06a] transition-all duration-500">
-                        Initiate Legal Assessment
+    <header class="min-h-screen flex flex-col justify-center items-center px-6 pt-20">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div class="space-y-10">
+                <p class="text-[#C5A059] text-[10px] tracking-[0.8em] uppercase font-black">Division of Structural Integrity</p>
+                <h1 class="text-6xl md:text-8xl font-heading font-bold leading-tight uppercase">
+                    Armor of <br> <span class="gold-gradient">Justice.</span>
+                </h1>
+                <p class="text-gray-500 text-lg max-w-md leading-relaxed font-light">
+                    Strategix Law Firm provides elite corporate counsel and sophisticated asset protection. We secure the foundations of your digital and physical empire.
+                </p>
+                <div class="pt-4">
+                    <button onclick="processDivisionEntry('strategix')" class="bg-[#C5A059] text-black px-12 py-5 font-bold text-xs tracking-[0.4em] uppercase hover:brightness-110 transition shadow-[0_10px_30px_rgba(197,160,89,0.2)]">
+                        Request Legal Briefing
                     </button>
                 </div>
-            </form>
-        </div>
-    </div>
-
-    <footer class="py-20 px-10 border-t border-white/5 bg-black">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div class="space-y-4">
-                <div class="text-xl font-bold font-heading tracking-widest text-white uppercase">
-                    AKS <span class="gold-accent">GROUP</span>
-                </div>
-                <p class="text-gray-500 text-xs leading-relaxed max-w-xs">
-                    Elite legal counsel and corporate strategy. A subsidiary of the AKS Group, Durgapur.
-                </p>
-            </div>
-            
-            <div class="space-y-4">
-                <h4 class="text-[10px] uppercase tracking-[0.4em] text-gray-400 font-bold uppercase">Contact Hub</h4>
-                <div class="space-y-2">
-                    <p class="text-sm text-gray-300">Phone: <span class="text-white">+91 7699854611</span></p>
-                    <p class="text-sm text-gray-300">Email: <span class="text-white">aksgroup.abakash@gmail.com</span></p>
-                </div>
             </div>
 
-            <div class="space-y-4">
-                <h4 class="text-[10px] uppercase tracking-[0.4em] text-gray-400 font-bold uppercase">Location</h4>
-                <p class="text-sm text-gray-300">
-                    Anuj Electricals Building,<br>
-                    Durgapur, WB, India.
-                </p>
+            <div class="glass-vault p-12 rounded-lg relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-[#C5A059]/20"></div>
+                <h3 class="text-[10px] tracking-[0.5em] text-gray-500 uppercase mb-10 text-center font-bold">Retainer Settlement Node</h3>
+                <div class="bg-black/50 p-6 rounded-sm border border-white/5">
+                    <img src="qr-code.jpeg" alt="Strategix Secure QR" class="w-full h-auto rounded grayscale hover:grayscale-0 transition duration-1000">
+                </div>
+                <div class="mt-10 space-y-4">
+                    <div class="flex justify-between items-center text-[9px] uppercase tracking-widest text-gray-500">
+                        <span>Assessment Fee:</span> <span class="text-white font-bold">₹4,999</span>
+                    </div>
+                    <div class="flex justify-between items-center text-[9px] uppercase tracking-widest text-gray-500">
+                        <span>Chief Counsel:</span> <span class="text-white">Abakash Kumar Sah</span>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 flex justify-between items-center">
-            <p class="text-[9px] text-gray-600 uppercase tracking-widest">© 2026 AKS Group. All Rights Reserved.</p>
-            <div class="flex gap-4 opacity-20">
-                <img src="https://cdn.razorpay.com/static/assets/badge/badge-dark.png" alt="Razorpay Secure" class="h-6">
+    </header>
+
+    <section class="py-32 px-8 md:px-20 border-t border-white/5 bg-[#080a0d]">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                <div class="legal-pillar">
+                    <h4 class="text-xl font-bold uppercase tracking-widest gold-gradient mb-4">Corporate Defense</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Structural engineering for companies to ensure maximum regulatory immunity and tax optimization.</p>
+                </div>
+                <div class="legal-pillar">
+                    <h4 class="text-xl font-bold uppercase tracking-widest gold-gradient mb-4">IP Protection</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Securing your digital assets, trademarks, and proprietary algorithms within the AKS technology stack.</p>
+                </div>
+                <div class="legal-pillar">
+                    <h4 class="text-xl font-bold uppercase tracking-widest gold-gradient mb-4">Contractual Alpha</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">High-stakes negotiation and airtight contract drafting for pan-India industrial ventures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-24 px-8 md:px-20 border-t border-white/5 bg-black">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-20">
+            <div class="space-y-6">
+                <span class="text-xl font-heading tracking-[0.3em] uppercase">AKS <span class="text-[#C5A059]">GROUP</span></span>
+                <p class="text-[9px] text-gray-700 tracking-[0.4em] uppercase">© 2026 Abakash Kumar Sah</p>
+            </div>
+            <div>
+                <h4 class="text-[10px] tracking-[0.4em] text-gray-500 font-bold uppercase mb-6">National Command</h4>
+                <p class="text-sm text-gray-400 font-medium tracking-tighter">DURGAPUR // WEST BENGAL // INDIA</p>
+                <div class="flex items-center gap-2 mt-4">
+                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+                    <span class="text-[9px] text-gray-600 tracking-widest uppercase italic">Legal Services Active Nationwide</span>
+                </div>
+            </div>
+            <div class="text-left md:text-right">
+                <h4 class="text-[10px] tracking-[0.4em] text-gray-500 font-bold uppercase mb-6">Executive Line</h4>
+                <p class="text-2xl font-heading text-[#C5A059] tracking-tighter">+91 7699854611</p>
+                <p class="text-[8px] text-gray-800 uppercase tracking-widest mt-8 italic">No. 1 Corporate Structural Integrity</p>
             </div>
         </div>
     </footer>
