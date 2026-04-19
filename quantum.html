@@ -3,124 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantum Edge | Abakash Kumar Sah</title>
+    <title>QUANTUM EDGE | AI INFRASTRUCTURE & AUTOMATION</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Inter:wght@200;400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
-    <style>
-        :root { --gold: #C5A059; --black: #05070a; --neon: #C5A059; }
-        body { background-color: var(--black); font-family: 'Inter', sans-serif; color: white; overflow-x: hidden; }
-        .font-heading { font-family: 'Montserrat', sans-serif; }
-        .font-mono { font-family: 'JetBrains Mono', monospace; }
-        .gold-gradient { background: linear-gradient(90deg, #C5A059 0%, #FFF 50%, #C5A059 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .cyber-border { border: 1px solid rgba(197, 160, 89, 0.2); position: relative; }
-        .cyber-border::before { content: ''; position: absolute; top: -1px; left: -1px; width: 10px; height: 10px; border-top: 2px solid var(--gold); border-left: 2px solid var(--gold); }
-        .scan-line { height: 100%; width: 2px; background: var(--gold); position: absolute; top: 0; left: 0; opacity: 0.2; animation: scan 4s linear infinite; }
-        @keyframes scan { 0% { left: 0; } 100% { left: 100%; } }
-    </style>
 </head>
-<body class="antialiased">
+<body class="bg-[#05070a] text-white font-sans selection:bg-[#C5A059] selection:text-black">
 
-    <nav class="flex justify-between items-center px-8 py-8 md:px-20 fixed w-full top-0 z-[100] backdrop-blur-xl border-b border-white/5">
-        <div class="flex items-center gap-4">
-            <a href="index.html" class="flex items-center gap-4">
-                <svg width="40" height="40" viewBox="0 0 100 100" fill="none">
-                    <circle cx="50" cy="50" r="40" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 4"/>
-                    <rect x="42" y="42" width="16" height="16" fill="#C5A059"/>
-                    <path d="M50 10V30M50 70V90M10 50H30M70 50H90" stroke="#C5A059" stroke-width="3"/>
-                </svg>
-                <span class="text-xl font-heading tracking-[0.3em] uppercase italic">QUANTUM <span class="text-[#C5A059]">EDGE</span></span>
-            </a>
-        </div>
-        <div class="flex items-center gap-6">
-            <span class="hidden md:block text-[8px] font-mono text-gray-600 tracking-[0.4em]">SYSTEM_STATUS: OPTIMAL</span>
-            <a href="index.html" class="text-[10px] tracking-[0.4em] font-bold text-gray-500 hover:text-[#C5A059] transition uppercase">HQ_TERMINAL</a>
-        </div>
+    <nav class="p-8 flex justify-between items-center border-b border-white/5">
+        <a href="index.html" class="text-[10px] tracking-[0.6em] font-bold gold-gradient uppercase">AKS GROUP</a>
+        <div class="h-[1px] w-12 bg-[#C5A059]/30"></div>
     </nav>
 
-    <header class="min-h-screen flex flex-col justify-center items-center px-6 pt-20 relative">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-            <div class="space-y-8">
-                <div class="inline-block px-4 py-1 border border-[#C5A059]/30 rounded-full">
-                    <p class="text-[#C5A059] text-[8px] tracking-[0.5em] uppercase font-mono font-bold">// Next-Gen Digital Infrastructure</p>
+    <main class="py-24 px-6 max-w-4xl mx-auto">
+        <header class="text-center mb-20">
+            <p class="text-[#C5A059] text-[10px] tracking-[0.5em] font-bold mb-4 uppercase">Division: Technology</p>
+            <h1 class="text-5xl md:text-7xl font-heading font-bold tracking-tighter mb-6 uppercase">Quantum Edge</h1>
+            <p class="text-gray-500 text-xs tracking-widest leading-loose uppercase max-w-lg mx-auto">
+                Deploying serverless logic, 256-bit encryption layers, and agentic autonomous business engines.
+            </p>
+        </header>
+
+        <section class="glass-terminal p-10 rounded-3xl border border-white/10 relative overflow-hidden bg-black/40 shadow-2xl">
+            <div id="intake-form">
+                <h3 class="text-center text-[10px] tracking-[0.4em] text-gray-400 uppercase mb-10 font-mono">System Intake Protocol</h3>
+                
+                <form onsubmit="handleInitialCapture(event, 'quantum')" class="space-y-6">
+                    <input type="text" name="entity" placeholder="DEVELOPMENT ENTITY / LEAD ARCHITECT" required 
+                        class="w-full bg-white/5 border border-white/10 p-5 text-white font-mono text-xs focus:border-[#C5A059] outline-none transition">
+                    
+                    <input type="email" name="email" placeholder="SECURE DEV EMAIL" required 
+                        class="w-full bg-white/5 border border-white/10 p-5 text-white font-mono text-xs focus:border-[#C5A059] outline-none transition">
+                    
+                    <textarea name="goals" placeholder="INFRASTRUCTURE GOALS / AUTOMATION REQUIREMENTS" required 
+                        class="w-full bg-white/5 border border-white/10 p-5 text-white font-mono text-xs focus:border-[#C5A059] outline-none h-32 transition"></textarea>
+                    
+                    <button type="submit" class="w-full py-5 bg-[#C5A059] text-black text-[10px] font-bold tracking-[0.3em] uppercase hover:bg-white hover:text-black transition shadow-lg">
+                        INITIATE TECH SETTLEMENT (₹9,999)
+                    </button>
+                </form>
+            </div>
+
+            <div id="settlement-node" class="hidden text-center space-y-8 animate-fade-in">
+                <div class="h-[1px] w-full bg-white/10 my-8"></div>
+                <p class="text-xs tracking-widest text-[#C5A059] uppercase font-mono">Verification Required for Core Access</p>
+                
+                <div class="bg-white p-3 rounded-xl inline-block shadow-[0_0_50px_rgba(197,160,89,0.1)]">
+                    <img src="qr-code.jpeg" alt="AKS QUANTUM SETTLEMENT" class="w-48 h-48">
                 </div>
-                <h1 class="text-6xl md:text-8xl font-heading font-bold leading-tight uppercase tracking-tighter">
-                    Automate <br> Everything<span class="gold-gradient">.</span>
-                </h1>
-                <p class="text-gray-500 text-sm md:text-base max-w-md leading-relaxed font-mono">
-                    Quantum Edge Technologies engineers the AI-driven engines that power the modern conglomerate. High-speed automation. Traceless efficiency.
-                </p>
-                <div class="pt-6 flex gap-6">
-                    <a href="https://wa.me/7699854611" class="bg-[#C5A059] text-black px-10 py-4 font-bold text-[10px] tracking-[0.3em] uppercase hover:skew-x-[-10deg] transition duration-300">Deploy Solution</a>
+
+                <div class="max-w-xs mx-auto">
+                    <input type="text" id="utr_field" placeholder="12-DIGIT TRANSACTION UTR" 
+                        class="w-full bg-black border border-[#C5A059]/40 p-4 text-[#C5A059] text-center font-mono tracking-widest text-sm outline-none">
+                    <button onclick="verifyAndReveal('quantum')" class="w-full mt-4 py-4 border border-[#C5A059] text-[#C5A059] text-[10px] tracking-widest uppercase hover:bg-[#C5A059] hover:text-black transition font-bold">
+                        Verify & Build Infrastructure
+                    </button>
                 </div>
             </div>
 
-            <div class="cyber-border p-1 rounded-sm overflow-hidden">
-                <div class="scan-line"></div>
-                <div class="bg-white/[0.02] p-10 backdrop-blur-3xl">
-                    <h3 class="text-[9px] font-mono tracking-[0.5em] text-gray-500 uppercase mb-8 text-center font-bold">Node Identity: 7699-8546-11</h3>
-                    <div class="relative group">
-                        <div class="absolute inset-0 bg-[#C5A059]/5 blur-xl group-hover:bg-[#C5A059]/10 transition"></div>
-                        <img src="qr-code.jpeg" alt="Quantum Node QR" class="relative w-full h-auto rounded grayscale brightness-75 hover:grayscale-0 hover:brightness-100 transition duration-1000 border border-white/5">
-                    </div>
-                    <div class="mt-8 pt-8 border-t border-white/5 space-y-3">
-                        <div class="flex justify-between font-mono text-[9px] uppercase tracking-widest">
-                            <span class="text-gray-600">Architect:</span>
-                            <span class="text-white">Abakash Kumar Sah</span>
-                        </div>
-                        <div class="flex justify-between font-mono text-[9px] uppercase tracking-widest">
-                            <span class="text-gray-600">Location:</span>
-                            <span class="text-white">Durgapur Node // WB</span>
-                        </div>
-                    </div>
+            <div id="solution-viewport" class="hidden mt-12 p-8 border border-white/10 bg-black/80 rounded-2xl animate-slide-up font-mono">
                 </div>
-            </div>
-        </div>
-    </header>
+        </section>
+    </main>
 
-    <section class="py-32 px-8 md:px-20 border-t border-white/5 bg-[#080a0d]">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div class="space-y-6 group">
-                <div class="h-[1px] w-full bg-white/5 group-hover:bg-[#C5A059] transition duration-700"></div>
-                <h4 class="text-lg font-bold uppercase tracking-widest gold-gradient">Agentic Autonomy</h4>
-                <p class="text-gray-500 text-xs font-mono leading-relaxed">Building self-correcting AI agents that manage complex business workflows with zero human friction.</p>
-            </div>
-            <div class="space-y-6 group">
-                <div class="h-[1px] w-full bg-white/5 group-hover:bg-[#C5A059] transition duration-700"></div>
-                <h4 class="text-lg font-bold uppercase tracking-widest gold-gradient">Cloud Architecture</h4>
-                <p class="text-gray-500 text-xs font-mono leading-relaxed">Scalable, high-security infrastructure designed to host the world's most demanding digital applications.</p>
-            </div>
-            <div class="space-y-6 group">
-                <div class="h-[1px] w-full bg-white/5 group-hover:bg-[#C5A059] transition duration-700"></div>
-                <h4 class="text-lg font-bold uppercase tracking-widest gold-gradient">Neural Growth</h4>
-                <p class="text-gray-500 text-xs font-mono leading-relaxed">Leveraging deep-learning models to predict market trends and automate client acquisition cycles.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-24 px-8 md:px-20 border-t border-white/5 bg-black">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
-            <div class="space-y-6">
-                <span class="text-xl font-heading tracking-[0.3em] uppercase italic">AKS <span class="text-[#C5A059]">GROUP</span></span>
-                <p class="text-[9px] font-mono text-gray-700 tracking-[0.4em] uppercase leading-relaxed">
-                    Division: Quantum Edge Tech<br>
-                    Lead Developer: Abakash Kumar Sah
-                </p>
-            </div>
-            <div class="space-y-4">
-                <h4 class="text-[10px] font-mono tracking-[0.4em] text-gray-500 font-bold uppercase">Network Hub</h4>
-                <p class="text-sm text-gray-400 font-medium">DURGAPUR // WEST BENGAL // INDIA</p>
-                <div class="flex items-center gap-2">
-                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full animate-ping"></div>
-                    <span class="text-[9px] font-mono text-gray-600 tracking-widest uppercase">System Online: All-India</span>
-                </div>
-            </div>
-            <div class="space-y-4 text-left md:text-right">
-                <h4 class="text-[10px] font-mono tracking-[0.4em] text-gray-500 font-bold uppercase">Terminal_Access</h4>
-                <p class="text-2xl font-heading text-[#C5A059] tracking-tighter">+91 7699854611</p>
-                <p class="text-[8px] text-gray-800 uppercase tracking-widest mt-8 font-mono">© 2026 Abakash Kumar Sah. No. 1 Tech Solutions.</p>
-            </div>
-        </div>
+    <footer class="py-12 text-center border-t border-white/5">
+        <p class="text-[9px] text-gray-600 tracking-[0.5em] uppercase font-mono">© 2026 AKS GROUP | Quantum Edge Tech Node</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
