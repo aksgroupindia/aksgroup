@@ -1,49 +1,123 @@
-/* Universal Reset & Variables */
+/* AKS GROUP - GLOBAL BRAND STYLES 
+   Primary Palette: #05070a (Deep Space), #C5A059 (Gold), #ffffff (White)
+*/
+
+/* 1. Base Setup */
 :root {
-  --aks-gold: #C5B358;
-  --aks-dark: #050505;
-  --aks-glass: rgba(255, 255, 255, 0.03);
-  --quantum-blue: #00F5FF;
-  --biopulse-teal: #008080;
+    --gold: #C5A059;
+    --gold-light: #F1D299;
+    --bg-dark: #05070a;
+    --glass: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--aks-dark);
-  color: white;
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-  margin: 0;
-  line-height: 1.6;
+    background-color: var(--bg-dark);
+    color: #ffffff;
+    overflow-x: hidden;
 }
 
-/* Glassmorphism Navigation */
-nav {
-  position: fixed;
-  top: 0; width: 100%;
-  padding: 20px;
-  background: rgba(5, 5, 5, 0.8);
-  backdrop-filter: blur(15px);
-  z-index: 1000;
-  display: flex;
-  justify-content: space-around;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+/* 2. Typography */
+.font-heading {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.02em;
 }
 
-nav a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
-nav a:hover { color: var(--aks-gold); }
-
-/* Unified Button Style */
-.cta-button {
-  padding: 12px 30px;
-  border: 1px solid var(--aks-gold);
-  background: transparent;
-  color: var(--aks-gold);
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.4s;
+.gold-gradient {
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
 }
 
-.cta-button:hover {
-  background: var(--aks-gold);
-  color: black;
-  box-shadow: 0 0 20px rgba(197, 179, 88, 0.4);
+/* 3. The Glassmorphism System */
+.glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.glass-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* 4. Luxury Inputs (Forms) */
+input, select, textarea {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid var(--glass-border) !important;
+    color: #fff !important;
+    padding: 1rem !important;
+    font-size: 0.9rem !important;
+    transition: all 0.3s ease !important;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--gold) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    outline: none !important;
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.1);
+}
+
+/* 5. Custom Buttons */
+.btn-premium {
+    background-color: var(--gold);
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 1.25rem 2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-premium:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+}
+
+.btn-outline {
+    border: 1px solid var(--glass-border);
+    background: transparent;
+    color: #fff;
+    padding: 1.25rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: var(--glass);
+    border-color: var(--gold);
+}
+
+/* 6. Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* 7. Responsive Fixes */
+@media (max-width: 768px) {
+    .text-5xl { font-size: 2.5rem; }
+    .text-7xl { font-size: 3.5rem; }
 }
