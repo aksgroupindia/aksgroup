@@ -2,34 +2,112 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bio Pulse | AKS Group</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biopulse | AKS Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #05070a; }
+        .gold-border { border-color: #C5A059; }
+        .gold-bg { background-color: #C5A059; }
+        input, select, textarea { 
+            background: rgba(255, 255, 255, 0.05) !important; 
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            color: white !important;
+        }
+        input:focus { border-color: #C5A059 !important; outline: none; }
+    </style>
 </head>
-<body class="sub-page">
-    <nav id="navbar" class="scrolled"> <div class="container">
-            <a href="index.html" class="logo">AKS<span>GROUP</span></a>
-            <a href="index.html" style="color:white; text-decoration:none;">← Back</a>
-        </div>
+<body class="text-white">
+
+    <nav class="p-6 border-b border-white/5 flex justify-between">
+        <a href="index.html" class="text-sm tracking-widest text-gray-400 hover:text-white transition">← BACK TO AKS GROUP</a>
+        <div class="font-bold tracking-tighter">BIOPULSE <span class="text-[#C5A059]">HEALTHCARE</span></div>
     </nav>
 
-    <section class="hero-small" style="padding-top: 150px; text-align: center;">
-        <h1 data-aos="fade-down">Bio Pulse <span class="text-gold">Healthcare</span></h1>
-        <p>Advanced nutrition and wellness protocols for the modern elite.</p>
-    </section>
+    <div class="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-16">
+        
+        <div class="space-y-8">
+            <h1 class="text-5xl font-bold font-heading leading-tight">Precision Nutrition <br> <span class="text-[#C5A059]">Optimized for You.</span></h1>
+            <p class="text-gray-400 text-lg">Stop following generic diet plans. Our AI-driven analysis takes your biological data and lifestyle metrics to craft a roadmap for peak performance.</p>
+            
+            <ul class="space-y-4">
+                <li class="flex items-center gap-3 text-sm text-gray-300">
+                    <span class="text-[#C5A059]">✓</span> Personalized Macros & Meal Timings
+                </li>
+                <li class="flex items-center gap-3 text-sm text-gray-300">
+                    <span class="text-[#C5A059]">✓</span> Metabolic Rate Analysis (BMR/TDEE)
+                </li>
+                <li class="flex items-center gap-3 text-sm text-gray-300">
+                    <span class="text-[#C5A059]">✓</span> Instant Digital Report Delivery
+                </li>
+            </ul>
 
-    <section class="content container" style="padding: 50px 0;">
-        <div class="funnel-box" style="background: var(--glass); padding: 40px; border-radius: 20px; border: 1px solid var(--accent-gold);">
-            <h2>Start Your Transformation</h2>
-            <p>Our automated onboarding ensures you get a response within 2 hours.</p>
-            <br>
-            <a href="https://forms.gle/YOUR_FORM_ID" class="btn-primary">Step 1: Fill Requirements Form</a>
-            <p style="margin: 10px 0; opacity: 0.6;">Then</p>
-            <a href="https://wa.me/YOUR_NUMBER?text=Hi!%20I%20just%20submitted%20the%20Bio%20Pulse%20form." class="btn-outline" style="color: var(--accent-gold); text-decoration: none; border: 1px solid var(--accent-gold); padding: 10px 20px; display: inline-block;">Step 2: Instant WhatsApp Connect</a>
+            <div class="p-6 bg-white/5 border-l-2 border-[#C5A059]">
+                <p class="text-sm italic text-gray-400">"The Biopulse report changed my approach to energy management during high-stress work weeks."</p>
+                <p class="text-xs font-bold mt-2">— Executive Client, AKS Group</p>
+            </div>
         </div>
-    </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+        <div class="bg-white/[0.02] p-8 rounded-2xl border border-white/5 shadow-2xl">
+            <h3 class="text-xl font-bold mb-6">Metabolic Assessment Form</h3>
+            
+            <form id="assessmentForm" class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Age</label>
+                        <input type="number" class="w-full p-3 rounded" placeholder="25">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Weight (kg)</label>
+                        <input type="number" class="w-full p-3 rounded" placeholder="70">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Primary Goal</label>
+                    <select class="w-full p-3 rounded appearance-none">
+                        <option>Weight Loss</option>
+                        <option>Muscle Gain</option>
+                        <option>Clean Bulking</option>
+                        <option>Energy Optimization</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Activity Level</label>
+                    <select class="w-full p-3 rounded appearance-none">
+                        <option>Sedentary (Office job)</option>
+                        <option>Lightly Active (1-2 days/week)</option>
+                        <option>Moderately Active (3-5 days/week)</option>
+                        <option>Athlete (Daily/High Intensity)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Dietary Preference</label>
+                    <div class="flex gap-4">
+                        <label class="text-sm"><input type="radio" name="diet" class="mr-2"> Veg</label>
+                        <label class="text-sm"><input type="radio" name="diet" class="mr-2"> Non-Veg</label>
+                        <label class="text-sm"><input type="radio" name="diet" class="mr-2"> Vegan</label>
+                    </div>
+                </div>
+
+                <div class="pt-6">
+                    <div class="flex justify-between items-end mb-4">
+                        <div>
+                            <span class="text-xs text-gray-500 block uppercase">One-time Assessment</span>
+                            <span class="text-2xl font-bold">₹1,999</span>
+                        </div>
+                        <span class="text-xs text-[#C5A059]">Secure 256-bit Encryption</span>
+                    </div>
+                    <button type="button" class="w-full gold-bg text-black font-bold py-4 rounded hover:brightness-110 transition uppercase tracking-widest text-sm">
+                        Generate My Report
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>
