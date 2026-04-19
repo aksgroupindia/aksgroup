@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #05070a; }
+        body { font-family: 'Inter', sans-serif; background-color: #05070a; scroll-behavior: smooth; }
         .font-heading { font-family: 'Montserrat', sans-serif; }
         .gold-gradient {
             background: linear-gradient(90deg, #C5A059 0%, #F1D299 50%, #C5A059 100%);
@@ -18,11 +18,13 @@
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: block; /* Makes the entire card clickable */
         }
         .glass-card:hover {
             border-color: #C5A059;
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.06);
         }
     </style>
 </head>
@@ -33,11 +35,11 @@
             AKS <span class="gold-gradient">GROUP</span>
         </div>
         <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-gray-400">
-            <a href="#" class="hover:text-white transition">Divisions</a>
+            <a href="#divisions" class="hover:text-white transition">Divisions</a>
             <a href="#" class="hover:text-white transition">About</a>
-            <a href="#" class="hover:text-white transition">Contact</a>
+            <a href="https://wa.me/9378123328" class="hover:text-white transition">Contact</a>
         </div>
-        <button class="px-6 py-2 border border-gold-500 text-sm font-bold rounded-full hover:bg-[#C5A059] hover:text-black transition duration-300">
+        <button class="px-6 py-2 border border-[#C5A059] text-sm font-bold rounded-full hover:bg-[#C5A059] hover:text-black transition duration-300">
             CLIENT LOGIN
         </button>
     </nav>
@@ -54,40 +56,55 @@
             </p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
                 <a href="#divisions" class="px-10 py-4 bg-[#C5A059] text-black font-bold rounded-sm hover:brightness-110 transition">EXPLORE DIVISIONS</a>
-                <a href="#" class="px-10 py-4 border border-white/20 hover:bg-white/5 transition">VIEW CORPORATE PROFILE</a>
+                <a href="https://wa.me/9378123328" class="px-10 py-4 border border-white/20 hover:bg-white/5 transition">CONTACT US</a>
             </div>
         </div>
     </section>
 
     <section id="divisions" class="py-20 px-10">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-heading font-bold mb-4">Our Specialized <span class="gold-gradient">Divisions</span></h2>
+            <p class="text-gray-500">Select a service to begin your personalized assessment.</p>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            <div class="glass-card p-8 rounded-lg">
+            
+            <a href="biopulse.html" class="glass-card p-8 rounded-lg">
                 <div class="text-[#C5A059] mb-4 text-3xl font-light">01</div>
-                <h3 class="font-heading font-bold mb-2">BIOPULSE</h3>
+                <h3 class="font-heading font-bold mb-2 uppercase">Biopulse</h3>
                 <p class="text-gray-500 text-sm">Precision nutrition and wellness optimized for high performance.</p>
-            </div>
-            <div class="glass-card p-8 rounded-lg">
+            </a>
+
+            <a href="innovista.html" class="glass-card p-8 rounded-lg">
                 <div class="text-[#C5A059] mb-4 text-3xl font-light">02</div>
-                <h3 class="font-heading font-bold mb-2">INNOVISTA</h3>
+                <h3 class="font-heading font-bold mb-2 uppercase">Innovista</h3>
                 <p class="text-gray-500 text-sm">Data-driven business consulting for global scaling.</p>
-            </div>
-            <div class="glass-card p-8 rounded-lg">
+            </a>
+
+            <a href="strategix.html" class="glass-card p-8 rounded-lg">
                 <div class="text-[#C5A059] mb-4 text-3xl font-light">03</div>
-                <h3 class="font-heading font-bold mb-2">STRATEGIX</h3>
+                <h3 class="font-heading font-bold mb-2 uppercase">Strategix</h3>
                 <p class="text-gray-500 text-sm">Elite legal advisory for corporate and personal protection.</p>
-            </div>
-            <div class="glass-card p-8 rounded-lg">
+            </a>
+
+            <a href="quantum.html" class="glass-card p-8 rounded-lg">
                 <div class="text-[#C5A059] mb-4 text-3xl font-light">04</div>
-                <h3 class="font-heading font-bold mb-2">QUANTUM EDGE</h3>
+                <h3 class="font-heading font-bold mb-2 uppercase">Quantum Edge</h3>
                 <p class="text-gray-500 text-sm">Advanced software and AI solutions for digital dominance.</p>
-            </div>
-            <div class="glass-card p-8 rounded-lg">
+            </a>
+
+            <a href="fortuna.html" class="glass-card p-8 rounded-lg">
                 <div class="text-[#C5A059] mb-4 text-3xl font-light">05</div>
-                <h3 class="font-heading font-bold mb-2">FORTUNA</h3>
+                <h3 class="font-heading font-bold mb-2 uppercase">Fortuna</h3>
                 <p class="text-gray-500 text-sm">Sophisticated wealth management and investment planning.</p>
-            </div>
+            </a>
+
         </div>
     </section>
+
+    <footer class="py-10 text-center border-t border-white/5">
+        <p class="text-[10px] text-gray-600 tracking-widest uppercase">© 2026 AKS Group | Integrated Excellence</p>
+    </footer>
 
 </body>
 </html>
