@@ -1,33 +1,36 @@
 /**
  * AKS GROUP - CORE SYSTEM LOGIC
- * Handles: Form Validation, Payment Trigger, and Data Persistence
+ * Master Controller for Payments and Data Persistence
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. SELECT THE FORM (Works for all 5 division pages)
+    // 1. SELECT THE FORM & BUTTON
     const assessmentForm = document.querySelector('form');
-    const payButton = assessmentForm ? assessmentForm.querySelector('button') : null;
+    // We target the specific ID I added to your HTML files
+    const payButton = document.getElementById('payButton');
 
-    if (payButton) {
+    if (payButton && assessmentForm) {
         payButton.addEventListener('click', (e) => {
             e.preventDefault();
             
             // 2. VALIDATE FORM DATA
             if (!assessmentForm.checkValidity()) {
-                alert("Please fill in all required fields before proceeding.");
+                alert("Please complete all required fields before generating your report.");
                 assessmentForm.reportValidity();
                 return;
             }
 
-            // 3. CAPTURE FORM DATA (To be used in the PDF)
+            // 3. CAPTURE FORM DATA
             const formData = new FormData(assessmentForm);
             const data = Object.fromEntries(formData.entries());
             
-            // Store data locally so thank-you.html can access it for the PDF link
+            // Log for debugging
+            console.log("Captured Data:", data);
+
+            // Store data locally so thank-you.html can access it later
             localStorage.setItem('aks_report_data', JSON.stringify(data));
 
             // 4. TRIGGER RAZORPAY
-            // NOTE: Replace 'YOUR_RAZORPAY_KEY' and 'AMOUNT' dynamically
             handlePayment(data);
         });
     }
@@ -35,34 +38,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /**
  * RAZORPAY INTEGRATION
- * This function opens the payment modal.
  */
 function handlePayment(userData) {
-    // Get the price based on the current page
-    const pagePath = window.location.pathname;
-    let amount = 1999; // Default (Biopulse)
+    const pagePath = window.location.pathname.toLowerCase();
     
-    if(pagePath.includes('fortuna')) amount = 2499;
-    if(pagePath.includes('strategix')) amount = 4999;
-    if(pagePath.includes('quantum')) amount = 9999;
-    if(pagePath.includes('innovista')) amount = 15000;
+    // Default Price (Biopulse)
+    let amount = 1999; 
+    
+    // Dynamic Price Routing
+    if (pagePath.includes('fortuna')) amount = 2499;
+    else if (pagePath.includes('strategix')) amount = 4999;
+    else if (pagePath.includes('quantum')) amount = 9999;
+    else if (pagePath.includes('innovista')) amount = 15000;
 
     const options = {
-        "key": "YOUR_RAZORPAY_KEY_HERE", // Enter your Key ID from Razorpay Dashboard
-        "amount": amount * 100, // Amount in paise
+        "key": "rzp_test_XXXXXXXXXXXXXX", // IMPORTANT: REPLACE THIS WITH YOUR REAL KEY
+        "amount": amount * 100, // Razorpay works in Paise
         "currency": "INR",
         "name": "AKS Group",
-        "description": "Intelligence Report Generation",
-        "image": "https://your-github-username.github.io/aks-group/logo.png",
+        "description": "Premium Intelligence Report",
+        "image": "https://aksgroupindia.github.io/aksgroup/logo.png", // Ensure this path is correct
         "handler": function (response) {
-            // This runs AFTER successful payment
-            console.log("Payment ID:", response.razorpay_payment_id);
+            // Success Logic
+            console.log("Transaction Successful:", response.razorpay_payment_id);
             
-            // REDIRECT TO THANK YOU PAGE
+            // Redirect to the success page with the payment ID
             window.location.href = `thank-you.html?payment_id=${response.razorpay_payment_id}`;
         },
         "prefill": {
-            "name": userData.name || "Valued Client",
+            "name": userData.name || "AKS Client",
             "email": userData.email || "aksgroup.abakash@gmail.com",
             "contact": "9378123328"
         },
@@ -71,6 +75,11 @@ function handlePayment(userData) {
         }
     };
 
-    const rzp1 = new Razorpay(options);
-    rzp1.open();
+    try {
+        const rzp1 = new Razorpay(options);
+        rzp1.open();
+    } catch (error) {
+        console.error("Razorpay failed to load:", error);
+        alert("Payment system is currently offline. Please try again later.");
+    }
 }
