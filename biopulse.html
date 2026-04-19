@@ -8,9 +8,9 @@
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #05070a; }
-        .gold-border { border-color: #C5A059; }
+        body { font-family: 'Inter', sans-serif; background-color: #05070a; scroll-behavior: smooth; }
         .gold-bg { background-color: #C5A059; }
+        .gold-text { color: #C5A059; }
         input, select, textarea { 
             background: rgba(255, 255, 255, 0.05) !important; 
             border: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -21,26 +21,33 @@
 </head>
 <body class="text-white">
 
-    <nav class="p-6 border-b border-white/5 flex justify-between">
-        <a href="index.html" class="text-sm tracking-widest text-gray-400 hover:text-white transition">← BACK TO AKS GROUP</a>
-        <div class="font-bold tracking-tighter">BIOPULSE <span class="text-[#C5A059]">HEALTHCARE</span></div>
+    <nav class="p-6 border-b border-white/5 flex justify-between items-center bg-black/50 backdrop-blur-md sticky top-0 z-50">
+        <a href="index.html" class="text-[10px] tracking-widest text-gray-500 hover:text-white transition uppercase">← BACK TO AKS GROUP</a>
+        <div class="flex items-center gap-3">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="1.5">
+                <path d="M12 2L3 7v10l9 5 9-5V7l-9-5z"/>
+                <path d="M7 12h2l2 4 2-8 2 4h2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="font-bold tracking-widest font-heading uppercase">BIOPULSE <span class="gold-text">HEALTHCARE</span></div>
+        </div>
+        <div class="hidden md:block text-[9px] text-gray-600 uppercase tracking-widest">Performance Nutrition Division</div>
     </nav>
 
     <div class="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-16">
         
         <div class="space-y-8">
-            <h1 class="text-5xl font-bold font-heading leading-tight">Precision Nutrition <br> <span class="text-[#C5A059]">Optimized for You.</span></h1>
+            <h1 class="text-5xl font-bold font-heading leading-tight">Precision Nutrition <br> <span class="gold-text italic">Optimized for You.</span></h1>
             <p class="text-gray-400 text-lg">Stop following generic diet plans. Our AI-driven analysis takes your biological data and lifestyle metrics to craft a roadmap for peak performance.</p>
             
             <ul class="space-y-4">
                 <li class="flex items-center gap-3 text-sm text-gray-300">
-                    <span class="text-[#C5A059]">✓</span> Personalized Macros & Meal Timings
+                    <span class="gold-text">✓</span> Personalized Macros & Meal Timings
                 </li>
                 <li class="flex items-center gap-3 text-sm text-gray-300">
-                    <span class="text-[#C5A059]">✓</span> Metabolic Rate Analysis (BMR/TDEE)
+                    <span class="gold-text">✓</span> Metabolic Rate Analysis (BMR/TDEE)
                 </li>
                 <li class="flex items-center gap-3 text-sm text-gray-300">
-                    <span class="text-[#C5A059]">✓</span> Instant Digital Report Delivery
+                    <span class="gold-text">✓</span> Instant Digital Report Delivery
                 </li>
             </ul>
 
@@ -56,17 +63,17 @@
             <form id="assessmentForm" class="space-y-4">
                 <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Age</label>
+                        <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Age</label>
                         <input type="number" name="age" class="w-full p-3 rounded" placeholder="25" required>
                     </div>
                     <div>
-                        <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Weight (kg)</label>
+                        <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Weight (kg)</label>
                         <input type="number" name="weight" class="w-full p-3 rounded" placeholder="70" required>
                     </div>
                 </div>
 
                 <div>
-                    <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Primary Goal</label>
+                    <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Primary Goal</label>
                     <select name="goal" class="w-full p-3 rounded appearance-none">
                         <option value="Weight Loss">Weight Loss</option>
                         <option value="Muscle Gain">Muscle Gain</option>
@@ -76,32 +83,30 @@
                 </div>
 
                 <div>
-                    <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Activity Level</label>
-                    <select name="activity" class="w-full p-3 rounded appearance-none">
-                        <option value="Sedentary">Sedentary (Office job)</option>
-                        <option value="Lightly Active">Lightly Active (1-2 days/week)</option>
-                        <option value="Moderately Active">Moderately Active (3-5 days/week)</option>
-                        <option value="Athlete">Athlete (Daily/High Intensity)</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Dietary Preference</label>
+                    <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Dietary Preference</label>
                     <div class="flex gap-4">
                         <label class="text-sm"><input type="radio" name="diet" value="Veg" class="mr-2" checked> Veg</label>
                         <label class="text-sm"><input type="radio" name="diet" value="Non-Veg" class="mr-2"> Non-Veg</label>
-                        <label class="text-sm"><input type="radio" name="diet" value="Vegan" class="mr-2"> Vegan</label>
                     </div>
                 </div>
 
-                <div class="pt-6">
+                <div class="pt-6 border-t border-white/10 mt-6">
+                    <div class="p-4 bg-white/5 border border-white/10 rounded-lg mb-6 text-center">
+                        <p class="text-[9px] uppercase tracking-widest text-gray-500 mb-3">Or Pay via Direct UPI Scan</p>
+                        <div class="flex justify-center mb-2">
+                            <img src="qr-code.jpeg" alt="AKS UPI QR" class="w-24 h-24 opacity-80 hover:opacity-100 transition">
+                        </div>
+                        <p class="text-[8px] text-gray-600">ID: 7699854611-1@okbizaxis</p>
+                    </div>
+
                     <div class="flex justify-between items-end mb-4">
                         <div>
-                            <span class="text-xs text-gray-500 block uppercase">One-time Assessment</span>
-                            <span class="text-2xl font-bold">₹1,999</span>
+                            <span class="text-[10px] text-gray-500 block uppercase">Assessment Fee</span>
+                            <span class="text-3xl font-bold">₹1,999</span>
                         </div>
-                        <span class="text-xs text-[#C5A059]">Secure 256-bit Encryption</span>
+                        <span class="text-[10px] gold-text italic">Instant PDF Generation</span>
                     </div>
+
                     <button type="button" id="payButton" class="w-full gold-bg text-black font-bold py-4 rounded hover:brightness-110 transition uppercase tracking-widest text-sm">
                         Generate My Report
                     </button>
@@ -109,6 +114,34 @@
             </form>
         </div>
     </div>
+
+    <footer class="py-20 px-10 border-t border-white/5 bg-black">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="space-y-4">
+                <div class="text-xl font-bold font-heading tracking-widest text-white uppercase">
+                    AKS <span class="gold-text">GROUP</span>
+                </div>
+                <p class="text-gray-500 text-xs leading-relaxed max-w-xs">
+                    Headquartered in Durgapur. Architecting excellence across Health, Tech, and Finance.
+                </p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold">Contact Hub</h4>
+                <div class="space-y-2">
+                    <p class="text-sm text-gray-300">Phone: <span class="text-white">+91 7699854611</span></p>
+                    <p class="text-sm text-gray-300">Email: <span class="text-white">aksgroup.abakash@gmail.com</span></p>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold">Location</h4>
+                <p class="text-sm text-gray-300">Anuj Electricals Building,<br>Durgapur, India.</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 flex justify-between items-center">
+            <p class="text-[9px] text-gray-600 uppercase tracking-widest">© 2026 AKS Group. All Rights Reserved.</p>
+            <img src="https://cdn.razorpay.com/static/assets/badge/badge-dark.png" alt="Razorpay Secure" class="h-6 opacity-30">
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
