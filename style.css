@@ -1,38 +1,38 @@
-/* AKS GROUP - GLOBAL BRAND IDENTITY 
-   Primary Palette: #05070a (Deep Space), #C5A059 (Signature Gold), #ffffff (White)
-   Typography: Montserrat (Headings), Inter (Body)
-*/
+/**
+ * AKS GROUP | GLOBAL DESIGN SYSTEM v2.0
+ * Architect: Abakash Kumar Sah
+ * Theme: Monolith Gold & Obsidian
+ */
 
-/* 1. CSS VARIABLES */
 :root {
     --gold: #C5A059;
-    --gold-light: #F1D299;
-    --gold-dark: #A6864A;
-    --bg-dark: #05070a;
-    --glass: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.08);
+    --gold-light: #F5E0B8;
+    --black: #05070a;
+    --vault-gray: #0a0c0f;
+    --glass: rgba(255, 255, 255, 0.02);
+    --glass-border: rgba(197, 160, 89, 0.15);
 }
 
-/* 2. CORE RESET & BASE */
+/* 1. CORE RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--bg-dark);
-    color: #ffffff;
+    background-color: var(--black);
+    color: white;
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* 3. LUXURY TYPOGRAPHY */
+/* 2. TYPOGRAPHY SYSTEM */
 .font-heading {
     font-family: 'Montserrat', sans-serif;
-    letter-spacing: -0.01em;
+    font-weight: 800;
 }
 
 .gold-gradient {
@@ -41,105 +41,85 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-/* 4. PREMIUM GLASSMORPHISM */
-.glass-card {
+/* 3. COMPONENT ARCHITECTURE */
+.glass-terminal {
     background: var(--glass);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.glass-card:hover {
+.glass-terminal:hover {
+    transform: translateY(-5px);
     border-color: var(--gold);
-    transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.06);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
 }
 
-/* 5. LUXURY FORM ELEMENTS */
-input, select, textarea {
-    background: rgba(255, 255, 255, 0.04) !important;
-    border: 1px solid var(--glass-border) !important;
-    color: #fff !important;
-    padding: 1.1rem !important;
-    font-size: 0.9rem !important;
-    transition: all 0.3s ease !important;
-    border-radius: 4px !important;
+/* 4. ANIMATION ENGINE */
+@keyframes drawPath {
+    to { stroke-dashoffset: 0; }
 }
 
-input:focus, select:focus, textarea:focus {
-    border-color: var(--gold) !important;
-    background: rgba(255, 255, 255, 0.08) !important;
-    outline: none !important;
-    box-shadow: 0 0 20px rgba(197, 160, 89, 0.15);
+@keyframes scanLine {
+    0% { left: 0; }
+    100% { left: 100%; }
 }
 
-/* 6. BUTTON SYSTEMS */
-.btn-premium {
+@keyframes pulseGlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.animate-draw {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawPath 4s ease-in-out forwards;
+}
+
+.scan-line {
+    height: 100%;
+    width: 2px;
+    background: var(--gold);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    animation: scanLine 4s linear infinite;
+}
+
+/* 5. UI ELEMENTS */
+.btn-gold {
     background-color: var(--gold);
-    color: #000;
+    color: var(--black);
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    padding: 1.25rem 2.5rem;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    cursor: pointer;
+    letter-spacing: 0.3em;
+    padding: 1rem 2.5rem;
+    transition: all 0.3s ease;
     border: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    cursor: pointer;
 }
 
-.btn-premium:hover {
-    filter: brightness(1.15);
-    transform: scale(1.03);
+.btn-gold:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
     box-shadow: 0 10px 30px rgba(197, 160, 89, 0.3);
 }
 
-.btn-outline {
-    border: 1px solid var(--gold);
-    background: transparent;
-    color: var(--gold);
-    padding: 1.25rem 2.5rem;
-    font-weight: 600;
+.nav-link {
+    font-size: 10px;
+    letter-spacing: 0.4em;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    transition: all 0.3s ease;
+    color: #666;
+    transition: color 0.3s ease;
 }
 
-.btn-outline:hover {
-    background: var(--gold);
-    color: #000;
+.nav-link:hover {
+    color: var(--gold);
 }
 
-/* 7. ANIMATIONS */
-@keyframes fadeInHero {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-hero {
-    animation: fadeInHero 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-
-/* 8. MOBILE OPTIMIZATION */
+/* 6. RESPONSIVE UTILITIES */
 @media (max-width: 768px) {
-    .px-10 { padding-left: 1.5rem; padding-right: 1.5rem; }
-    h1 { font-size: 2.75rem !important; }
-    .py-20 { padding-top: 3.5rem; padding-bottom: 3.5rem; }
-    
-    /* Ensure forms are touch-friendly */
-    input, select, textarea {
-        font-size: 16px !important; /* Prevents iOS zoom */
-    }
-}
-
-/* 9. SPECIAL FX */
-.qr-container img {
-    filter: drop-shadow(0 0 10px rgba(197, 160, 89, 0.2));
-}
-
-.mono {
-    font-family: 'JetBrains Mono', monospace;
+    h1 { font-size: 3.5rem !important; }
+    .px-20 { padding-left: 2rem !important; padding-right: 2rem !important; }
 }
