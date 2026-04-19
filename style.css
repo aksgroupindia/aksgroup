@@ -1,19 +1,19 @@
-/**
- * AKS GROUP | GLOBAL DESIGN SYSTEM v2.0
- * Architect: Abakash Kumar Sah
- * Theme: Monolith Gold & Obsidian
+/* * AKS GROUP | GLOBAL DESIGN SYSTEM v5.0 
+ * Theme: Monolithic Gold & Obsidian
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:wght@700&display=swap');
 
 :root {
     --gold: #C5A059;
-    --gold-light: #F5E0B8;
-    --black: #05070a;
-    --vault-gray: #0a0c0f;
-    --glass: rgba(255, 255, 255, 0.02);
-    --glass-border: rgba(197, 160, 89, 0.15);
+    --gold-light: #F5E0A3;
+    --obsidian: #05070a;
+    --glass: rgba(255, 255, 255, 0.03);
+    --border: rgba(197, 160, 89, 0.2);
+    --font-main: 'Inter', sans-serif;
+    --font-heading: 'Playfair Display', serif;
 }
 
-/* 1. CORE RESET */
 * {
     margin: 0;
     padding: 0;
@@ -21,105 +21,112 @@
 }
 
 body {
-    background-color: var(--black);
+    background-color: var(--obsidian);
     color: white;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-main);
     line-height: 1.6;
     overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
 }
 
-/* 2. TYPOGRAPHY SYSTEM */
-.font-heading {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-}
+/* Typography */
+.font-heading { font-family: var(--font-heading); }
 
 .gold-gradient {
-    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
-/* 3. COMPONENT ARCHITECTURE */
+/* Layout Elements */
 .glass-terminal {
     background: var(--glass);
-    border: 1px solid var(--glass-border);
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--border);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
 }
 
-.glass-terminal:hover {
-    transform: translateY(-5px);
-    border-color: var(--gold);
+/* Form Styling */
+input, textarea {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: white !important;
+    transition: all 0.3s ease !important;
 }
 
-/* 4. ANIMATION ENGINE */
-@keyframes drawPath {
-    to { stroke-dashoffset: 0; }
+input:focus, textarea:focus {
+    border-color: var(--gold) !important;
+    background: rgba(197, 160, 89, 0.05) !important;
+    outline: none;
 }
 
-@keyframes scanLine {
-    0% { left: 0; }
-    100% { left: 100%; }
-}
-
-@keyframes pulseGlow {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
-}
-
-.animate-draw {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: drawPath 4s ease-in-out forwards;
-}
-
-.scan-line {
-    height: 100%;
-    width: 2px;
-    background: var(--gold);
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.3;
-    animation: scanLine 4s linear infinite;
-}
-
-/* 5. UI ELEMENTS */
-.btn-gold {
-    background-color: var(--gold);
-    color: var(--black);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    padding: 1rem 2.5rem;
-    transition: all 0.3s ease;
-    border: none;
+/* Buttons */
+button {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     cursor: pointer;
 }
 
-.btn-gold:hover {
-    filter: brightness(1.1);
-    transform: scale(1.02);
-    box-shadow: 0 10px 30px rgba(197, 160, 89, 0.3);
+button:hover {
+    letter-spacing: 0.2em;
+    filter: brightness(1.2);
 }
 
-.nav-link {
-    font-size: 10px;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
-    color: #666;
-    transition: color 0.3s ease;
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.nav-link:hover {
-    color: var(--gold);
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* 6. RESPONSIVE UTILITIES */
-@media (max-width: 768px) {
-    h1 { font-size: 3.5rem !important; }
-    .px-20 { padding-left: 2rem !important; padding-right: 2rem !important; }
+.animate-fade-in { animation: fadeIn 1s ease forwards; }
+.animate-slide-up { animation: slideUp 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--obsidian);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 10px;
+}
+
+/* Hide elements for transition */
+.hidden {
+    display: none;
+}
+
+/* Division Cards Hover Effect */
+.division-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.division-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(197, 160, 89, 0.05),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.division-card:hover::before {
+    left: 100%;
 }
