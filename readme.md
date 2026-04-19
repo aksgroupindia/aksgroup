@@ -1,41 +1,43 @@
-# AKS (Abakash Kumar Sah) Group - Digital Headquarters
-### Integrated Solutions for Health, Business, Law, Technology & Finance
+# AKS Group | Integrated Excellence Headquarters 🏛️
 
 ![Status](https://img.shields.io/badge/Status-Production--Ready-gold?style=for-the-badge)
 ![Tech](https://img.shields.io/badge/Built%20With-Tailwind%20CSS-blue?style=for-the-badge)
 ![Hosting](https://img.shields.io/badge/Deployment-GitHub%20Pages-black?style=for-the-badge)
 
-**AKS Group** is a premium, multi-division conglomerate platform designed for high-revenue growth and automated digital service delivery. This system utilizes "Agentic Autonomy" to handle user intake, payments, and personalized report generation with zero manual intervention.
+**AKS Group** is a premium, multi-division conglomerate platform architected for high-revenue growth and automated digital service delivery. Based in Durgapur, India, this digital headquarters utilizes a luxury design aesthetic (inspired by Apple and Tesla) to provide services across Health, Law, Technology, Finance, and Business Advisory.
 
 ---
 
-## 🏛 The Ecosystem (5 Divisions)
+## 🏗️ The Ecosystem (5 Specialized Divisions)
 
-| Division | Focus | Price Point |
+Each division is a standalone service engine with automated intake forms and payment integration.
+
+| Division | Industry focus | Assessment Fee |
 | :--- | :--- | :--- |
-| **Biopulse Healthcare** | Precision Nutrition & Wellness | ₹1,999 |
-| **Innovista Advisory** | Business Scaling & Management | ₹15,000 |
-| **Strategix Law Firm** | Corporate Legal & IP Protection | ₹4,999 |
-| **Quantum Edge** | Tech Infrastructure & AI Solutions | ₹9,999 |
-| **Fortuna Capital** | Wealth Management & Finance | ₹2,499 |
+| **Biopulse** | Precision Nutrition & Healthcare | ₹1,999 |
+| **Innovista** | Business Scaling & Management | ₹15,000 |
+| **Strategix** | Corporate Legal & IP Protection | ₹4,999 |
+| **Quantum Edge** | AI Infrastructure & Software | ₹9,999 |
+| **Fortuna** | Wealth Management & Finance | ₹2,499 |
 
 ---
 
-## 🚀 Key Features
+## 🚀 Core Features
 
-* **Ultra-Premium UI:** Clean, minimalist design inspired by Apple and Tesla.
-* **Automated Funnel:** Form Submission → Razorpay Payment → Dynamic PDF Generation.
-* **Fully Responsive:** Optimized for both High-End Desktop and Mobile users.
-* **Static & Scalable:** Hosted on GitHub Pages for 99.9% uptime and zero hosting costs.
+- **Ultra-Premium UI/UX:** Dark-mode architecture with gold accents and high-performance glassmorphism.
+- **Automated Funnel:** Form Intake → Razorpay Gateway Integration → Direct UPI QR Support.
+- **Agentic Ready:** Structured to deliver instant digital reports (PDFs) upon payment verification.
+- **Fully Responsive:** Optimized for high-end desktop displays and mobile mobile devices.
+- **Zero Overhead:** Hosted entirely on GitHub Pages for maximum uptime with zero hosting costs.
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-- **Frontend:** HTML5, Tailwind CSS (CDN), Google Fonts.
-- **Logic:** Vanilla JavaScript (`script.js`) for data persistence and state management.
-- **Payments:** Razorpay Standard Integration.
-- **Automation (External):** Recommended integration with Zapier or Make.com for PDF delivery.
+- **Frontend:** HTML5, Tailwind CSS (Custom Config), Google Fonts (Montserrat & Inter).
+- **Logic:** Vanilla JavaScript (`script.js`) for payment triggers and local data persistence.
+- **Payments:** Razorpay Standard SDK + Integrated Google Pay UPI QR.
+- **Graphics:** Scalable Vector Graphics (SVG) for high-fidelity branding.
 
 ---
 
@@ -50,5 +52,6 @@
 ├── quantum.html        # Tech & AI Division
 ├── fortuna.html        # Finance & Investment Division
 ├── thank-you.html      # Post-Payment Success Page
-├── style.css           # Global Luxury Branding
-└── script.js           # Payment & Data Logic
+├── qr-code.jpeg        # Direct Payment QR (GPay/UPI)
+├── style.css           # Global Luxury Branding Styles
+└── script.js           # Core Payment & Automation Logic
