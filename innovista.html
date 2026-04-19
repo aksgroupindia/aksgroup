@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Innovista Advisory | AKS Group</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #05070a; }
@@ -59,41 +60,41 @@
             <form id="innovistaForm" class="space-y-6">
                 <div>
                     <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Company Name</label>
-                    <input type="text" class="w-full p-4 rounded-none" placeholder="Enter Legal Entity Name" required>
+                    <input type="text" name="company_name" class="w-full p-4 rounded-none" placeholder="Enter Legal Entity Name" required>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Current Revenue (Annual)</label>
-                        <select class="w-full p-4 rounded-none appearance-none">
-                            <option>Early Stage (< 10L)</option>
-                            <option>Growth (10L - 50L)</option>
-                            <option>Scaling (50L - 1Cr)</option>
-                            <option>Enterprise (1Cr+)</option>
+                        <select name="revenue" class="w-full p-4 rounded-none appearance-none">
+                            <option value="Early Stage">Early Stage (< 10L)</option>
+                            <option value="Growth">Growth (10L - 50L)</option>
+                            <option value="Scaling">Scaling (50L - 1Cr)</option>
+                            <option value="Enterprise">Enterprise (1Cr+)</option>
                         </select>
                     </div>
                     <div>
                         <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Team Size</label>
-                        <input type="number" class="w-full p-4 rounded-none" placeholder="No. of Employees">
+                        <input type="number" name="team_size" class="w-full p-4 rounded-none" placeholder="No. of Employees">
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Primary Growth Bottleneck</label>
-                    <select class="w-full p-4 rounded-none appearance-none">
-                        <option>Marketing & Lead Generation</option>
-                        <option>Operational Inefficiency</option>
-                        <option>Capital & Funding Access</option>
-                        <option>Product-Market Fit</option>
+                    <select name="bottleneck" class="w-full p-4 rounded-none appearance-none">
+                        <option value="Marketing">Marketing & Lead Generation</option>
+                        <option value="Operations">Operational Inefficiency</option>
+                        <option value="Funding">Capital & Funding Access</option>
+                        <option value="Market Fit">Product-Market Fit</option>
                     </select>
                 </div>
 
                 <div>
                     <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Business Type</label>
                     <div class="flex gap-6">
-                        <label class="text-xs uppercase flex items-center gap-2 cursor-pointer"><input type="radio" name="btype" checked> B2B</label>
-                        <label class="text-xs uppercase flex items-center gap-2 cursor-pointer"><input type="radio" name="btype"> B2C</label>
-                        <label class="text-xs uppercase flex items-center gap-2 cursor-pointer"><input type="radio" name="btype"> SaaS</label>
+                        <label class="text-xs uppercase flex items-center gap-2 cursor-pointer"><input type="radio" name="btype" value="B2B" checked> B2B</label>
+                        <label class="text-xs uppercase flex items-center gap-2 cursor-pointer"><input type="radio" name="btype" value="B2C"> B2C</label>
+                        <label class="text-xs uppercase flex items-center gap-2 cursor-pointer"><input type="radio" name="btype" value="SaaS"> SaaS</label>
                     </div>
                 </div>
 
@@ -103,7 +104,7 @@
                         <span class="text-4xl font-bold font-heading">₹15,000</span>
                     </div>
 
-                    <button type="button" class="w-full gold-bg text-black font-bold py-5 rounded-none uppercase tracking-[0.3em] text-xs hover:bg-[#d4b06a] transition-colors">
+                    <button type="button" id="payButton" class="w-full gold-bg text-black font-bold py-5 rounded-none uppercase tracking-[0.3em] text-xs hover:bg-[#d4b06a] transition-colors">
                         Generate Strategy Roadmap
                     </button>
                     
@@ -117,15 +118,6 @@
         </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-6 pb-20">
-        <div class="border border-white/5 p-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="text-gray-500 text-xs">Need a custom enterprise consultation? Contact our lead advisor directly.</p>
-            <div class="flex gap-8">
-                <a href="https://wa.me/9378123328" class="text-xs font-bold hover:text-[#C5A059] transition uppercase tracking-widest">WhatsApp</a>
-                <a href="mailto:aksgroup.abakash@gmail.com" class="text-xs font-bold hover:text-[#C5A059] transition uppercase tracking-widest">Email</a>
-            </div>
-        </div>
-    </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
