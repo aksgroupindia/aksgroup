@@ -3,146 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biopulse | AKS Group</title>
+    <title>Bio Pulse Healthcare | Abakash Kumar Sah</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #05070a; scroll-behavior: smooth; }
-        .gold-bg { background-color: #C5A059; }
+        body { background-color: #05070a; font-family: 'Inter', sans-serif; color: white; }
+        .font-heading { font-family: 'Montserrat', sans-serif; }
         .gold-text { color: #C5A059; }
-        input, select, textarea { 
-            background: rgba(255, 255, 255, 0.05) !important; 
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
-            color: white !important;
-        }
-        input:focus { border-color: #C5A059 !important; outline: none; }
+        .gold-bg { background-color: #C5A059; }
+        .gold-border { border-color: #C5A059; }
+        .glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); }
     </style>
 </head>
-<body class="text-white">
+<body>
 
-    <nav class="p-6 border-b border-white/5 flex justify-between items-center bg-black/50 backdrop-blur-md sticky top-0 z-50">
-        <a href="index.html" class="text-[10px] tracking-widest text-gray-500 hover:text-white transition uppercase">← BACK TO AKS GROUP</a>
-        <div class="flex items-center gap-3">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="1.5">
-                <path d="M12 2L3 7v10l9 5 9-5V7l-9-5z"/>
-                <path d="M7 12h2l2 4 2-8 2 4h2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <div class="font-bold tracking-widest font-heading uppercase">BIOPULSE <span class="gold-text">HEALTHCARE</span></div>
-        </div>
-        <div class="hidden md:block text-[9px] text-gray-600 uppercase tracking-widest">Performance Nutrition Division</div>
-    </nav>
-
-    <div class="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-16">
-        
-        <div class="space-y-8">
-            <h1 class="text-5xl font-bold font-heading leading-tight">Precision Nutrition <br> <span class="gold-text italic">Optimized for You.</span></h1>
-            <p class="text-gray-400 text-lg">Stop following generic diet plans. Our AI-driven analysis takes your biological data and lifestyle metrics to craft a roadmap for peak performance.</p>
-            
-            <ul class="space-y-4">
-                <li class="flex items-center gap-3 text-sm text-gray-300">
-                    <span class="gold-text">✓</span> Personalized Macros & Meal Timings
-                </li>
-                <li class="flex items-center gap-3 text-sm text-gray-300">
-                    <span class="gold-text">✓</span> Metabolic Rate Analysis (BMR/TDEE)
-                </li>
-                <li class="flex items-center gap-3 text-sm text-gray-300">
-                    <span class="gold-text">✓</span> Instant Digital Report Delivery
-                </li>
-            </ul>
-
-            <div class="p-6 bg-white/5 border-l-2 border-[#C5A059]">
-                <p class="text-sm italic text-gray-400">"The Biopulse report changed my approach to energy management during high-stress work weeks."</p>
-                <p class="text-xs font-bold mt-2">— Executive Client, AKS Group</p>
+    <nav class="flex justify-between items-center px-10 py-6 border-b border-white/5 bg-black/40 backdrop-blur-lg sticky top-0 z-50">
+        <div class="flex items-center gap-4">
+            <a href="index.html">
+                <svg width="35" height="35" viewBox="0 0 100 100" fill="none">
+                    <path d="M50 10L85 30V70L50 90L15 70V30L50 10Z" stroke="#C5A059" stroke-width="4"/>
+                    <path d="M30 55H40L45 40L55 65L60 55H70" stroke="#C5A059" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <div class="text-xl font-bold font-heading tracking-widest uppercase">
+                BIO PULSE <span class="gold-text">HEALTHCARE</span>
             </div>
         </div>
-
-        <div class="bg-white/[0.02] p-8 rounded-2xl border border-white/5 shadow-2xl">
-            <h3 class="text-xl font-bold mb-6">Metabolic Assessment Form</h3>
-            
-            <form id="assessmentForm" class="space-y-4">
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Age</label>
-                        <input type="number" name="age" class="w-full p-3 rounded" placeholder="25" required>
-                    </div>
-                    <div>
-                        <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Weight (kg)</label>
-                        <input type="number" name="weight" class="w-full p-3 rounded" placeholder="70" required>
-                    </div>
-                </div>
-
-                <div>
-                    <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Primary Goal</label>
-                    <select name="goal" class="w-full p-3 rounded appearance-none">
-                        <option value="Weight Loss">Weight Loss</option>
-                        <option value="Muscle Gain">Muscle Gain</option>
-                        <option value="Clean Bulking">Clean Bulking</option>
-                        <option value="Energy Optimization">Energy Optimization</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Dietary Preference</label>
-                    <div class="flex gap-4">
-                        <label class="text-sm"><input type="radio" name="diet" value="Veg" class="mr-2" checked> Veg</label>
-                        <label class="text-sm"><input type="radio" name="diet" value="Non-Veg" class="mr-2"> Non-Veg</label>
-                    </div>
-                </div>
-
-                <div class="pt-6 border-t border-white/10 mt-6">
-                    <div class="p-4 bg-white/5 border border-white/10 rounded-lg mb-6 text-center">
-                        <p class="text-[9px] uppercase tracking-widest text-gray-500 mb-3">Or Pay via Direct UPI Scan</p>
-                        <div class="flex justify-center mb-2">
-                            <img src="qr-code.jpeg" alt="AKS UPI QR" class="w-24 h-24 opacity-80 hover:opacity-100 transition">
-                        </div>
-                        <p class="text-[8px] text-gray-600">ID: 7699854611-1@okbizaxis</p>
-                    </div>
-
-                    <div class="flex justify-between items-end mb-4">
-                        <div>
-                            <span class="text-[10px] text-gray-500 block uppercase">Assessment Fee</span>
-                            <span class="text-3xl font-bold">₹1,999</span>
-                        </div>
-                        <span class="text-[10px] gold-text italic">Instant PDF Generation</span>
-                    </div>
-
-                    <button type="button" id="payButton" class="w-full gold-bg text-black font-bold py-4 rounded hover:brightness-110 transition uppercase tracking-widest text-sm">
-                        Generate My Report
-                    </button>
-                </div>
-            </form>
+        <div class="hidden md:flex gap-8 text-[10px] tracking-[0.3em] uppercase font-semibold text-gray-400">
+            <a href="index.html" class="hover:text-[#C5A059] transition">Headquarters</a>
+            <a href="#" class="text-white">Precision Nutrition</a>
+            <a href="https://wa.me/7699854611" class="hover:text-[#C5A059] transition">Consultation</a>
         </div>
-    </div>
+    </nav>
 
-    <footer class="py-20 px-10 border-t border-white/5 bg-black">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+    <header class="relative py-24 px-10 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-16">
+            <div>
+                <p class="gold-text text-[10px] tracking-[0.5em] uppercase mb-4 font-bold">Division of AKS Group</p>
+                <h1 class="text-5xl md:text-7xl font-bold font-heading mb-6 leading-tight uppercase">Precision <br> <span class="gold-text">Biology.</span></h1>
+                <p class="text-gray-400 text-lg mb-10 max-w-md leading-relaxed">
+                    Stop guessing your health. We use AI-driven metabolic data to build your ultimate roadmap for vitality and performance.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#booking" class="gold-bg text-black px-8 py-4 font-bold text-xs tracking-widest uppercase hover:brightness-110 transition">Get Your Report</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-4 bg-[#C5A059]/10 blur-3xl rounded-full"></div>
+                <img src="qr-code.jpeg" alt="AKS Payment Gateway" class="relative w-72 h-72 mx-auto rounded-xl border border-white/10 p-4 bg-white/5 shadow-2xl">
+                <p class="text-center mt-6 text-[10px] text-gray-500 tracking-[0.3em] uppercase">Scan to Secure Consultation</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 px-10 bg-white/[0.01]">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="glass-card p-10 space-y-4">
+                <div class="w-10 h-10 gold-bg flex items-center justify-center rounded-sm text-black font-bold">01</div>
+                <h3 class="text-xl font-bold uppercase tracking-tight">Metabolic Mapping</h3>
+                <p class="text-sm text-gray-500">Advanced analysis of your unique metabolic rate to optimize energy and fat-loss efficiency.</p>
+            </div>
+            <div class="glass-card p-10 space-y-4">
+                <div class="w-10 h-10 gold-bg flex items-center justify-center rounded-sm text-black font-bold">02</div>
+                <h3 class="text-xl font-bold uppercase tracking-tight">Precision Macros</h3>
+                <p class="text-sm text-gray-500">Science-based nutritional blueprints tailored to your genetic markers and lifestyle goals.</p>
+            </div>
+            <div class="glass-card p-10 space-y-4">
+                <div class="w-10 h-10 gold-bg flex items-center justify-center rounded-sm text-black font-bold">03</div>
+                <h3 class="text-xl font-bold uppercase tracking-tight">Longevity Strategy</h3>
+                <p class="text-sm text-gray-500">Proactive health management designed by Abakash Kumar Sah to secure your physical legacy.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 px-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
             <div class="space-y-4">
                 <div class="text-xl font-bold font-heading tracking-widest text-white uppercase">
                     AKS <span class="gold-text">GROUP</span>
                 </div>
-                <p class="text-gray-500 text-xs leading-relaxed max-w-xs">
-                    Headquartered in India. Architecting excellence across Health, Tech, and Finance.
+                <p class="text-gray-500 text-[10px] leading-relaxed uppercase tracking-widest">
+                    Division: Bio Pulse Healthcare<br>
+                    Founder: Abakash Kumar Sah
                 </p>
             </div>
+            
             <div class="space-y-4">
-                <h4 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold">Contact Hub</h4>
-                <div class="space-y-2">
-                    <p class="text-sm text-gray-300">Phone: <span class="text-white">+91 7699854611</span></p>
-                    <p class="text-sm text-gray-300">Email: <span class="text-white">aksgroup.abakash@gmail.com</span></p>
+                <h4 class="text-[10px] uppercase tracking-[0.4em] text-gray-400 font-bold">Headquarters</h4>
+                <p class="text-sm text-gray-300 leading-relaxed uppercase">
+                    Durgapur, West Bengal, India.
+                </p>
+                <div class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                    <span class="text-[9px] text-gray-500 uppercase tracking-widest">Serving India Nationwide</span>
                 </div>
             </div>
+
             <div class="space-y-4">
-                <h4 class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold">Location</h4>
-                <p class="text-sm text-gray-300">,<br>India.</p>
+                <h4 class="text-[10px] uppercase tracking-[0.4em] text-gray-400 font-bold">Contact</h4>
+                <p class="text-sm text-gray-300">+91 7699854611</p>
+                <p class="text-xs text-gray-500 font-mono italic">aksgroup.abakash@gmail.com</p>
             </div>
-        </div>
-        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 flex justify-between items-center">
-            <p class="text-[9px] text-gray-600 uppercase tracking-widest">© 2026 AKS Group. All Rights Reserved.</p>
-            <img src="https://cdn.razorpay.com/static/assets/badge/badge-dark.png" alt="Razorpay Secure" class="h-6 opacity-30">
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
