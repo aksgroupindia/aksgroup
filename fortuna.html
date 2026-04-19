@@ -3,132 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fortuna Capital | Abakash Kumar Sah</title>
+    <title>FORTUNA CAPITAL | ALPHA WEALTH ARCHITECTURE</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root { --gold: #C5A059; --black: #020406; --vault-gray: #0a0c0f; }
-        body { background-color: var(--black); font-family: 'Inter', sans-serif; color: white; overflow-x: hidden; }
-        .font-heading { font-family: 'Montserrat', sans-serif; }
-        .gold-gradient { background: linear-gradient(90deg, #C5A059 0%, #F5E0B8 50%, #C5A059 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .vault-card { background: var(--vault-gray); border: 1px solid rgba(197, 160, 89, 0.1); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
-        .stat-border { border-left: 1px solid rgba(197, 160, 89, 0.3); padding-left: 20px; }
-        .infinite-path { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: draw 4s ease-in-out forwards; }
-        @keyframes draw { to { stroke-dashoffset: 0; } }
-    </style>
 </head>
-<body class="antialiased">
+<body class="bg-[#05070a] text-white font-sans selection:bg-[#C5A059] selection:text-black">
 
-    <nav class="flex justify-between items-center px-8 py-8 md:px-20 fixed w-full top-0 z-[100] backdrop-blur-xl border-b border-white/5">
-        <div class="flex items-center gap-4">
-            <a href="index.html" class="flex items-center gap-4">
-                <svg width="40" height="40" viewBox="0 0 100 100" fill="none">
-                    <path class="infinite-path" d="M20 80C20 80 40 20 80 20" stroke="#C5A059" stroke-width="10" stroke-linecap="round"/>
-                    <circle cx="80" cy="20" r="6" fill="#C5A059"/>
-                </svg>
-                <span class="text-xl font-heading tracking-[0.3em] uppercase">FORTUNA <span class="text-[#C5A059]">CAPITAL</span></span>
-            </a>
-        </div>
-        <a href="index.html" class="text-[10px] tracking-[0.4em] font-bold text-gray-600 hover:text-[#C5A059] transition uppercase">Corporate Hub</a>
+    <nav class="p-8 flex justify-between items-center border-b border-white/5">
+        <a href="index.html" class="text-[10px] tracking-[0.6em] font-bold gold-gradient uppercase">AKS GROUP</a>
+        <div class="h-[1px] w-12 bg-[#C5A059]/30"></div>
     </nav>
 
-    <header class="min-h-screen flex flex-col justify-center items-center px-6 pt-20 relative">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-            <div class="space-y-10">
-                <p class="text-[#C5A059] text-[10px] tracking-[0.8em] uppercase font-black">Private Wealth Management</p>
-                <h1 class="text-6xl md:text-8xl font-heading font-bold leading-tight uppercase">
-                    Wealth <br> Without <span class="gold-gradient">Limits.</span>
-                </h1>
-                <div class="grid grid-cols-2 gap-8">
-                    <div class="stat-border">
-                        <p class="text-[10px] text-gray-500 uppercase tracking-widest mb-2">Strategy</p>
-                        <p class="text-sm font-bold uppercase">High-Alpha Growth</p>
-                    </div>
-                    <div class="stat-border">
-                        <p class="text-[10px] text-gray-500 uppercase tracking-widest mb-2">Focus</p>
-                        <p class="text-sm font-bold uppercase">Legacy Shield</p>
-                    </div>
+    <main class="py-24 px-6 max-w-4xl mx-auto">
+        <header class="text-center mb-20">
+            <p class="text-[#C5A059] text-[10px] tracking-[0.5em] font-bold mb-4 uppercase">Division: Finance</p>
+            <h1 class="text-5xl md:text-7xl font-heading font-bold tracking-tighter mb-6 uppercase">Fortuna</h1>
+            <p class="text-gray-500 text-xs tracking-widest leading-loose uppercase max-w-lg mx-auto">
+                High-yield asset allocation and generational wealth shielding for the digital elite.
+            </p>
+        </header>
+
+        <section class="glass-terminal p-10 rounded-3xl border border-white/10 relative overflow-hidden bg-gradient-to-br from-white/5 to-transparent">
+            <div id="intake-form">
+                <h3 class="text-center text-[10px] tracking-[0.4em] text-gray-400 uppercase mb-10 italic">Wealth Intake Protocol</h3>
+                
+                <form onsubmit="handleInitialCapture(event, 'fortuna')" class="space-y-6">
+                    <input type="text" name="entity" placeholder="LEGAL ENTITY / FULL NAME" required 
+                        class="w-full bg-white/5 border border-white/10 p-5 text-white font-mono text-xs focus:border-[#C5A059] outline-none transition">
+                    
+                    <input type="email" name="email" placeholder="SECURE FINANCIAL EMAIL" required 
+                        class="w-full bg-white/5 border border-white/10 p-5 text-white font-mono text-xs focus:border-[#C5A059] outline-none transition">
+                    
+                    <textarea name="goals" placeholder="CAPITAL OBJECTIVES / GROWTH TARGETS" required 
+                        class="w-full bg-white/5 border border-white/10 p-5 text-white font-mono text-xs focus:border-[#C5A059] outline-none h-32 transition"></textarea>
+                    
+                    <button type="submit" class="w-full py-5 bg-[#C5A059] text-black text-[10px] font-bold tracking-[0.3em] uppercase hover:brightness-110 transition shadow-lg">
+                        INITIATE SETTLEMENT (₹2,499)
+                    </button>
+                </form>
+            </div>
+
+            <div id="settlement-node" class="hidden text-center space-y-8 animate-fade-in">
+                <div class="h-[1px] w-full bg-white/10 my-8"></div>
+                <p class="text-xs tracking-widest text-[#C5A059] uppercase font-bold italic">Awaiting Capital Verification</p>
+                
+                <div class="bg-white p-3 rounded-xl inline-block shadow-[0_0_50px_rgba(197,160,89,0.1)]">
+                    <img src="qr-code.jpeg" alt="AKS FORTUNA SETTLEMENT" class="w-48 h-48">
                 </div>
-                <div class="pt-6">
-                    <a href="https://wa.me/9378123328" class="bg-[#C5A059] text-black px-12 py-5 font-bold text-xs tracking-[0.3em] uppercase hover:scale-105 transition duration-500 shadow-[0_10px_30px_rgba(197,160,89,0.3)]">Enter The Wealth Desk</a>
+
+                <div class="max-w-xs mx-auto">
+                    <input type="text" id="utr_field" placeholder="12-DIGIT UTR NUMBER" 
+                        class="w-full bg-black border border-[#C5A059]/40 p-4 text-[#C5A059] text-center font-mono tracking-widest text-sm outline-none">
+                    <button onclick="verifyAndReveal('fortuna')" class="w-full mt-4 py-4 border border-[#C5A059] text-[#C5A059] text-[10px] tracking-widest uppercase hover:bg-[#C5A059] hover:text-black transition font-bold">
+                        Analyze Alpha Projection
+                    </button>
                 </div>
             </div>
 
-            <div class="vault-card p-12 rounded-2xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-6 opacity-10">
-                    <svg width="120" height="120" viewBox="0 0 100 100" fill="none">
-                        <path d="M20 80C20 80 40 20 80 20" stroke="#C5A059" stroke-width="2"/>
-                    </svg>
+            <div id="solution-viewport" class="hidden mt-12 p-8 border border-[#C5A059]/30 bg-black/80 rounded-2xl animate-slide-up">
                 </div>
-                <h3 class="text-[10px] tracking-[0.5em] text-gray-500 uppercase mb-10 text-center font-bold">Secure Settlement Terminal</h3>
-                <div class="bg-black/40 p-4 rounded-xl border border-white/5 backdrop-blur-md">
-                    <img src="qr-code.jpeg" alt="Fortuna Secure Node" class="w-full h-auto rounded-lg grayscale hover:grayscale-0 transition duration-1000 shadow-2xl">
-                </div>
-                <div class="mt-10 space-y-4">
-                    <div class="flex justify-between items-center border-b border-white/5 pb-4">
-                        <span class="text-[9px] text-gray-600 uppercase tracking-widest">Custodian</span>
-                        <span class="text-[11px] text-white font-bold uppercase tracking-widest">Abakash Kumar Sah</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-[9px] text-gray-600 uppercase tracking-widest">Network Status</span>
-                        <span class="text-[9px] text-green-500 font-bold uppercase tracking-widest">Encrypted / Active</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+        </section>
+    </main>
 
-    <section class="py-32 px-8 md:px-20 border-t border-white/5">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-[10px] tracking-[0.8em] text-[#C5A059] uppercase font-bold mb-20 text-center">Proprietary Alpha Models</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="p-10 border border-white/5 hover:bg-white/[0.02] transition duration-500">
-                    <h4 class="text-xl font-bold uppercase tracking-widest mb-6 gold-gradient">Capital Compound</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed font-light italic">"Time is the ultimate leverage."</p>
-                    <p class="text-gray-400 text-xs mt-4 leading-relaxed">Aggressive reallocation into emerging sectors to outpace traditional market indices.</p>
-                </div>
-                <div class="p-10 border border-white/5 hover:bg-white/[0.02] transition duration-500">
-                    <h4 class="text-xl font-bold uppercase tracking-widest mb-6 gold-gradient">Risk Neutrality</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed font-light italic">"Preserve the core at all costs."</p>
-                    <p class="text-gray-400 text-xs mt-4 leading-relaxed">Advanced hedging techniques tailored to protect multi-generational family estates.</p>
-                </div>
-                <div class="p-10 border border-white/5 hover:bg-white/[0.02] transition duration-500">
-                    <h4 class="text-xl font-bold uppercase tracking-widest mb-6 gold-gradient">Quantum Arbitrage</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed font-light italic">"Data drives the exit."</p>
-                    <p class="text-gray-400 text-xs mt-4 leading-relaxed">Leveraging the AKS Group technology stack to identify unique capital opportunities.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-24 px-8 md:px-20 border-t border-white/5 bg-black">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-20">
-            <div class="space-y-6">
-                <span class="text-xl font-heading tracking-[0.3em] uppercase">AKS <span class="text-[#C5A059]">GROUP</span></span>
-                <p class="text-[9px] text-gray-700 tracking-[0.4em] uppercase leading-relaxed">
-                    Division: Fortuna Capital<br>
-                    Director: Abakash Kumar Sah
-                </p>
-            </div>
-            <div class="space-y-4">
-                <h4 class="text-[10px] tracking-[0.4em] text-gray-500 font-bold uppercase">National Command</h4>
-                <p class="text-sm text-gray-400 font-medium tracking-tighter">DURGAPUR // WEST BENGAL // INDIA</p>
-                <div class="flex items-center gap-2">
-                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.5)]"></div>
-                    <span class="text-[9px] text-gray-500 tracking-widest uppercase">Pan-India Wealth Grid Operational</span>
-                </div>
-            </div>
-            <div class="space-y-4 text-left md:text-right">
-                <h4 class="text-[10px] tracking-[0.4em] text-gray-500 font-bold uppercase">Private Desk</h4>
-                <p class="text-2xl font-heading text-[#C5A059] tracking-tighter">+91 9378123328</p>
-                <p class="text-[8px] text-gray-800 uppercase tracking-widest mt-8">© 2026 Abakash Kumar Sah. No. 1 Capital Management.</p>
-            </div>
-        </div>
+    <footer class="py-12 text-center border-t border-white/5">
+        <p class="text-[9px] text-gray-600 tracking-[0.5em] uppercase">© 2026 AKS GROUP | Fortuna Capital Node</p>
     </footer>
-
-</body>
-</html>
 
     <script src="script.js"></script>
 </body>
 </html>
+  
