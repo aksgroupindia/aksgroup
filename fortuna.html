@@ -3,159 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fortuna Capital | AKS Group</title>
+    <title>Fortuna Capital | Abakash Kumar Sah</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #05070a; scroll-behavior: smooth; }
-        .gold-accent { color: #C5A059; }
-        .gold-bg { background-color: #C5A059; }
-        input, select { 
-            background: rgba(255, 255, 255, 0.03) !important; 
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
-            color: white !important;
-        }
-        input:focus, select:focus { border-color: #C5A059 !important; outline: none; }
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.01);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
+        :root { --gold: #C5A059; --black: #020406; --vault-gray: #0a0c0f; }
+        body { background-color: var(--black); font-family: 'Inter', sans-serif; color: white; overflow-x: hidden; }
+        .font-heading { font-family: 'Montserrat', sans-serif; }
+        .gold-gradient { background: linear-gradient(90deg, #C5A059 0%, #F5E0B8 50%, #C5A059 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .vault-card { background: var(--vault-gray); border: 1px solid rgba(197, 160, 89, 0.1); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+        .stat-border { border-left: 1px solid rgba(197, 160, 89, 0.3); padding-left: 20px; }
+        .infinite-path { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: draw 4s ease-in-out forwards; }
+        @keyframes draw { to { stroke-dashoffset: 0; } }
     </style>
 </head>
-<body class="text-white">
+<body class="antialiased">
 
-    <nav class="p-6 border-b border-white/5 flex justify-between items-center bg-black/50 backdrop-blur-md sticky top-0 z-50">
-        <a href="index.html" class="text-xs tracking-[0.2em] text-gray-500 hover:text-white transition uppercase">← AKS GROUP</a>
-        <div class="flex items-center gap-3">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="1.5">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M8 16v-2m4 2v-5m4 5v-8" stroke-linecap="round" stroke-width="2"/>
-            </svg>
-            <div class="font-bold tracking-widest font-heading uppercase">FORTUNA <span class="gold-accent">CAPITAL</span></div>
+    <nav class="flex justify-between items-center px-8 py-8 md:px-20 fixed w-full top-0 z-[100] backdrop-blur-xl border-b border-white/5">
+        <div class="flex items-center gap-4">
+            <a href="index.html" class="flex items-center gap-4">
+                <svg width="40" height="40" viewBox="0 0 100 100" fill="none">
+                    <path class="infinite-path" d="M20 80C20 80 40 20 80 20" stroke="#C5A059" stroke-width="10" stroke-linecap="round"/>
+                    <circle cx="80" cy="20" r="6" fill="#C5A059"/>
+                </svg>
+                <span class="text-xl font-heading tracking-[0.3em] uppercase">FORTUNA <span class="text-[#C5A059]">CAPITAL</span></span>
+            </a>
         </div>
-        <div class="text-[10px] text-gray-600 uppercase hidden md:block tracking-widest">Wealth Management Division</div>
+        <a href="index.html" class="text-[10px] tracking-[0.4em] font-bold text-gray-600 hover:text-[#C5A059] transition uppercase">Corporate Hub</a>
     </nav>
 
-    <div class="max-w-7xl mx-auto px-6 py-12 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-        
-        <div class="space-y-10">
-            <div>
-                <h2 class="text-sm uppercase tracking-[0.4em] gold-accent mb-4">Investment Planning</h2>
-                <h1 class="text-5xl md:text-6xl font-bold font-heading leading-tight uppercase">Secure Your <br> Financial Legacy.</h1>
-            </div>
-            
-            <p class="text-gray-400 text-lg font-light leading-relaxed max-w-lg">
-                Fortuna Capital provides sophisticated, risk-adjusted investment roadmaps. We architect portfolios built for generational wealth using algorithmic precision and global standards.
-            </p>
-
-            <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-10">
-                <div>
-                    <h4 class="text-white font-bold mb-1">Algorithmic Precision</h4>
-                    <p class="text-xs text-gray-500">Data-driven asset allocation models.</p>
+    <header class="min-h-screen flex flex-col justify-center items-center px-6 pt-20 relative">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div class="space-y-10">
+                <p class="text-[#C5A059] text-[10px] tracking-[0.8em] uppercase font-black">Private Wealth Management</p>
+                <h1 class="text-6xl md:text-8xl font-heading font-bold leading-tight uppercase">
+                    Wealth <br> Without <span class="gold-gradient">Limits.</span>
+                </h1>
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="stat-border">
+                        <p class="text-[10px] text-gray-500 uppercase tracking-widest mb-2">Strategy</p>
+                        <p class="text-sm font-bold uppercase">High-Alpha Growth</p>
+                    </div>
+                    <div class="stat-border">
+                        <p class="text-[10px] text-gray-500 uppercase tracking-widest mb-2">Focus</p>
+                        <p class="text-sm font-bold uppercase">Legacy Shield</p>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="text-white font-bold mb-1">Global Standards</h4>
-                    <p class="text-xs text-gray-500">Diversification across multiple asset classes.</p>
+                <div class="pt-6">
+                    <a href="https://wa.me/9378123328" class="bg-[#C5A059] text-black px-12 py-5 font-bold text-xs tracking-[0.3em] uppercase hover:scale-105 transition duration-500 shadow-[0_10px_30px_rgba(197,160,89,0.3)]">Enter The Wealth Desk</a>
+                </div>
+            </div>
+
+            <div class="vault-card p-12 rounded-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-6 opacity-10">
+                    <svg width="120" height="120" viewBox="0 0 100 100" fill="none">
+                        <path d="M20 80C20 80 40 20 80 20" stroke="#C5A059" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h3 class="text-[10px] tracking-[0.5em] text-gray-500 uppercase mb-10 text-center font-bold">Secure Settlement Terminal</h3>
+                <div class="bg-black/40 p-4 rounded-xl border border-white/5 backdrop-blur-md">
+                    <img src="qr-code.jpeg" alt="Fortuna Secure Node" class="w-full h-auto rounded-lg grayscale hover:grayscale-0 transition duration-1000 shadow-2xl">
+                </div>
+                <div class="mt-10 space-y-4">
+                    <div class="flex justify-between items-center border-b border-white/5 pb-4">
+                        <span class="text-[9px] text-gray-600 uppercase tracking-widest">Custodian</span>
+                        <span class="text-[11px] text-white font-bold uppercase tracking-widest">Abakash Kumar Sah</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-[9px] text-gray-600 uppercase tracking-widest">Network Status</span>
+                        <span class="text-[9px] text-green-500 font-bold uppercase tracking-widest">Encrypted / Active</span>
+                    </div>
                 </div>
             </div>
         </div>
+    </header>
 
-        <div class="glass-panel p-10 rounded-3xl shadow-2xl relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-[#C5A059] opacity-5 blur-[80px]"></div>
-            
-            <h3 class="text-2xl font-bold mb-8 font-heading uppercase">Wealth Assessment</h3>
-            
-            <form id="fortunaForm" class="space-y-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Monthly Savings (INR)</label>
-                        <input type="number" name="monthly_savings" class="w-full p-4 rounded-xl" placeholder="e.g. 50000" required>
-                    </div>
-                    <div>
-                        <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Risk Appetite</label>
-                        <select name="risk_appetite" class="w-full p-4 rounded-xl appearance-none">
-                            <option value="Conservative">Conservative</option>
-                            <option value="Moderate" selected>Moderate</option>
-                            <option value="Aggressive">Aggressive</option>
-                        </select>
-                    </div>
+    <section class="py-32 px-8 md:px-20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-[10px] tracking-[0.8em] text-[#C5A059] uppercase font-bold mb-20 text-center">Proprietary Alpha Models</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="p-10 border border-white/5 hover:bg-white/[0.02] transition duration-500">
+                    <h4 class="text-xl font-bold uppercase tracking-widest mb-6 gold-gradient">Capital Compound</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed font-light italic">"Time is the ultimate leverage."</p>
+                    <p class="text-gray-400 text-xs mt-4 leading-relaxed">Aggressive reallocation into emerging sectors to outpace traditional market indices.</p>
                 </div>
-
-                <div>
-                    <label class="block text-[10px] uppercase tracking-widest text-gray-500 mb-2">Primary Investment Goal</label>
-                    <select name="goal" class="w-full p-4 rounded-xl appearance-none">
-                        <option value="Retirement">Retirement Planning</option>
-                        <option value="Independence">Financial Independence</option>
-                        <option value="Real Estate">Real Estate Acquisition</option>
-                    </select>
+                <div class="p-10 border border-white/5 hover:bg-white/[0.02] transition duration-500">
+                    <h4 class="text-xl font-bold uppercase tracking-widest mb-6 gold-gradient">Risk Neutrality</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed font-light italic">"Preserve the core at all costs."</p>
+                    <p class="text-gray-400 text-xs mt-4 leading-relaxed">Advanced hedging techniques tailored to protect multi-generational family estates.</p>
                 </div>
-
-                <div class="p-6 bg-white/[0.02] border border-white/10 rounded-2xl text-center">
-                    <p class="text-[9px] uppercase tracking-widest text-gray-500 mb-4">Direct UPI Transfer (Scan to Pay)</p>
-                    <div class="flex justify-center mb-3">
-                        <img src="qr-code.jpeg" alt="AKS UPI QR" class="w-28 h-28 opacity-90 hover:opacity-100 transition rounded-lg border border-white/5">
-                    </div>
-                    <p class="text-[9px] text-gray-500 font-mono tracking-tighter">ID: 7699854611-1@okbizaxis</p>
+                <div class="p-10 border border-white/5 hover:bg-white/[0.02] transition duration-500">
+                    <h4 class="text-xl font-bold uppercase tracking-widest mb-6 gold-gradient">Quantum Arbitrage</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed font-light italic">"Data drives the exit."</p>
+                    <p class="text-gray-400 text-xs mt-4 leading-relaxed">Leveraging the AKS Group technology stack to identify unique capital opportunities.</p>
                 </div>
-
-                <div class="pt-8 border-t border-white/5 mt-8">
-                    <div class="flex justify-between items-center mb-6">
-                        <div>
-                            <p class="text-[10px] text-gray-500 uppercase tracking-widest">Consultation Fee</p>
-                            <p class="text-3xl font-bold font-heading">₹2,499</p>
-                        </div>
-                        <img src="https://cdn.razorpay.com/static/assets/logo_black.png" alt="Razorpay" class="h-4 opacity-40">
-                    </div>
-
-                    <button type="button" id="payButton" class="w-full gold-bg text-black font-bold py-5 rounded-xl uppercase tracking-[0.2em] text-xs hover:scale-[1.02] transition-transform duration-300">
-                        Secure My Investment Plan
-                    </button>
-                    
-                    <p class="text-[9px] text-center text-gray-600 mt-4 leading-relaxed uppercase tracking-tighter">
-                        Digital report generated instantly upon verification.
-                    </p>
-                </div>
-            </form>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <footer class="py-20 px-10 border-t border-white/5 bg-black">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div class="space-y-4">
-                <div class="text-xl font-bold font-heading tracking-widest text-white uppercase">
-                    AKS <span class="gold-accent">GROUP</span>
-                </div>
-                <p class="text-gray-500 text-xs leading-relaxed max-w-xs">
-                    Architecting generational wealth and digital excellence. Headquartered in Durgapur, India.
+    <footer class="py-24 px-8 md:px-20 border-t border-white/5 bg-black">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-20">
+            <div class="space-y-6">
+                <span class="text-xl font-heading tracking-[0.3em] uppercase">AKS <span class="text-[#C5A059]">GROUP</span></span>
+                <p class="text-[9px] text-gray-700 tracking-[0.4em] uppercase leading-relaxed">
+                    Division: Fortuna Capital<br>
+                    Director: Abakash Kumar Sah
                 </p>
             </div>
-            
             <div class="space-y-4">
-                <h4 class="text-[10px] uppercase tracking-[0.4em] text-gray-400 font-bold">Contact Hub</h4>
-                <div class="space-y-2">
-                    <p class="text-sm text-gray-300">Phone: <span class="text-white">+91 7699854611</span></p>
-                    <p class="text-sm text-gray-300">Email: <span class="text-white">aksgroup.abakash@gmail.com</span></p>
+                <h4 class="text-[10px] tracking-[0.4em] text-gray-500 font-bold uppercase">National Command</h4>
+                <p class="text-sm text-gray-400 font-medium tracking-tighter">DURGAPUR // WEST BENGAL // INDIA</p>
+                <div class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.5)]"></div>
+                    <span class="text-[9px] text-gray-500 tracking-widest uppercase">Pan-India Wealth Grid Operational</span>
                 </div>
             </div>
-
-            <div class="space-y-4">
-                <h4 class="text-[10px] uppercase tracking-[0.4em] text-gray-400 font-bold">Location</h4>
-                <p class="text-sm text-gray-300">
-                    Anuj Electricals Building,<br>
-                    Durgapur, West Bengal.
-                </p>
-            </div>
-        </div>
-        
-        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 flex justify-between items-center">
-            <p class="text-[9px] text-gray-600 uppercase tracking-widest">© 2026 AKS Group. All Rights Reserved.</p>
-            <div class="flex gap-4 opacity-20">
-                <img src="https://cdn.razorpay.com/static/assets/badge/badge-dark.png" alt="Razorpay Secure" class="h-6">
+            <div class="space-y-4 text-left md:text-right">
+                <h4 class="text-[10px] tracking-[0.4em] text-gray-500 font-bold uppercase">Private Desk</h4>
+                <p class="text-2xl font-heading text-[#C5A059] tracking-tighter">+91 9378123328</p>
+                <p class="text-[8px] text-gray-800 uppercase tracking-widest mt-8">© 2026 Abakash Kumar Sah. No. 1 Capital Management.</p>
             </div>
         </div>
     </footer>
+
+</body>
+</html>
 
     <script src="script.js"></script>
 </body>
